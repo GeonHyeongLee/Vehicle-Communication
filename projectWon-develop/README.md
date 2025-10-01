@@ -1,103 +1,60 @@
-# 🏎️ RC카 자율주행 프로젝트 (TC375 기반)
+# 🚀Project SYNAPSE: SDV 기반 무선 OTA 업데이트 및 상태 진단 시스템🚀
 
-## 📌 프로젝트 개요
-이 프로젝트는 **Infineon AURIX TC375 Lite Kit**을 기반으로 한 RC카 자율주행 시스템입니다.  
-초음파 센서와 Bluetooth 통신을 활용하여 **후방 자율 주차**, **전방 추돌 경고**, **수동 조작 주행** 기능을 구현하였습니다.
+![image.png](attachment:20bac19e-c663-45cc-bc53-31d9084a3415:image.png)
 
----
-
-## ⚙️ 주요 기능
-
-| 기능            | 설명                                                                 |
-|-----------------|----------------------------------------------------------------------|
-| `autopark`      | 초음파 센서를 기반으로 주차 공간을 탐색하고 자동으로 후진 주차 수행       |
-| `fcw`           | 전방 거리 감지를 통해 장애물과의 충돌을 방지하는 경고 시스템               |
-| `control`       | Bluetooth를 통한 전진, 회전, 정지 등 수동 제어 기능                        |
-| `motor`         | PWM 제어를 통해 모터의 속도 및 방향을 제어                                 |
-| `bluetooth`     | UART 통신 기반 Bluetooth 입력 수신 처리                                   |
-| `buzzer`, `led` | 주행 상태 또는 경고 상황을 사용자에게 알리는 출력 장치 제어                |
+![image.png](attachment:e7c78281-aa7d-4475-8c36-ac00d888a43f:image.png)
 
 ---
 
-
-## 📁 프로젝트 구조
-```
-projectWon/
-  ├── ASW/
-  │    ├── auth/ # 암호키
-  │    ├── autopark/ # 자율주차
-  │    ├── drivecontrol/ # 원격주행
-  │    ├── emergencystop/ # 긴급제동
-  │    └── fsm # 상태전이
-  └── BSW/
-     ├── MCAL/ # Microcontroller Abstraction Layer
-     └── Service
-```
-
+![image.png](attachment:9766aaa3-8218-4b2d-964f-2909cfe516b6:image.png)
 
 ---
 
-## 🔌 사용된 하드웨어
+### **## 팀 구성**
 
-| 부품             | 설명                                       |
-|------------------|--------------------------------------------|
-| MCU              | Infineon AURIX TC375 Lite Kit             |
-| 초음파 센서       | HC-SR04 (거리 측정용)        |
-| Bluetooth 모듈   | HC-06 (UART 통신 기반)                    |
-| 모터 드라이버     | L298N                       |
-| 액추에이터        | 부저, LED                                   |
-| 섀시 및 구동계    | 4WD RC카             |
-
----
-
-## 🛠️ 빌드 방법
-
-1. **IDE 설치**
-   - Infineon AURIX Development Studio (ADS) 사용
-2. **프로젝트 임포트**
-   - `projectWon` 폴더를 ADS에서 Import
-3. **Build Config**
-   - `Debug` 또는 `Release` 선택 후 빌드
-4. **보드에 업로드**
-   - USB 연결 후 Flash 버튼 클릭
-
----
-
-## ▶️ 실행 방법
-
-- **전원 공급**  
-  보드 및 모터 드라이버에 전원 공급
-
-- **Bluetooth 연결**  
-  PC에서 tools/drivecontrol_bluetooth/controller.py 실행  
-  키 입력으로 제어 가능
-
-- **Autopark 모드 진입**  
-  'p' 입력 시 자동 주차 FSM 실행
-
-- **AEB 모드 진입**
-  't' 입력 시 AEB 모드 실행
----
-
-## 📎 참고 사항
-
-- 실시간성 확보를 위해 GPT12 타이머 인터럽트를 활용
-- 거리 필터링에 이동 평균(Moving Average) 사용
-- 상태 기반 FSM으로 시나리오 동작 구현
-- 자율 주차 기능은 초음파 센서 기반으로 공간을 인식하며 후진 정렬까지 수행
+- **[역할 1] 임베디드 시스템 담당자**
+    - **담당 기술:** `STM OTA 업데이트`, `CAN UDS (ECU 측)`, `CAN TP (ECU 측)`
+    - **주요 업무:**
+        - STM32용 부트로더 개발 (A/B 스왑 로직 포함)
+        - 플래시 메모리 드라이버 작성
+        - UDS, CAN TP 프로토콜 스택을 펌웨어에 포팅 및 구현
+        - OTA 업데이트 및 진단 요청을 처리하는 로직 개발
+        - **STM32**: OTA로 '설정 파일'을 수신하고, 그 내용을 해석해서 TC375로 보낼 **CAN 명령을 생성하고 전송하는** 로직을 개발합니다.
+        - **TC375**: 기존의 핵심 기능(주행, 제동 등)에 더해, STM으로부터 **CAN 명령을 수신하여 자신의 동작(기능 On/Off, 파라미터 값)을 변경하는** 로직을 **추가**합니다.
+        - **핵심 역할**: 결과적으로 이 담당자는 **STM과 TC375 두 MCU 간의 CAN 통신 규약(프로토콜)을 직접 설계하고 구현**하는 핵심적인 역할을 맡게 됩니다.
+- **[역할 2] 게이트웨이 & 백엔드 담당자**
+    - **담당 기술:** `vsomeip`, `DoIP`, `CAN UDS (게이트웨이 측)`, `CAN TP (게이트웨이 측)`
+    - **주요 업무:**
+        - 라즈베리파이 리눅스 환경 개발
+        - vsomeip 기반 OTA 서버 애플리케이션 개발
+        - DoIP 기반 진단 게이트웨이 애플리케이션 개발
+        - 이더넷 통신(DoIP, vsomeip)과 CAN 통신(UDS)을 중계하는 라우팅 로직 구현
+        - 게이트웨이의 임무는 PC로부터 받은 데이터를 CAN 버스로, CAN 버스에서 온 데이터를 PC로 '투명하게 중계'하는 것입니다.
+        - PC에서 보낸 파일이 펌웨어 전체이든 작은 설정 파일이든, 게이트웨이는 그 내용물을 신경 쓸 필요 없이 **정해진 UDS 절차에 따라 STM으로 전달**만 하면 됩니다.
+        - 따라서 기존에 정의된 업무를 그대로 수행하면 됩니다.
+- **[역할 3] PC 애플리케이션 & GUI 담당자**
+    - **담당 기술:** `PC GUI`, `vsomeip (클라이언트)`, `DoIP (클라이언트)`
+    - **주요 업무:**
+        - Python(PyQt, Tkinter) 또는 C++(Qt) 등을 이용한 GUI 프로그램 개발
+        - OTA 업데이트를 실행하고 모니터링하는 PC 프로그램 제작
+        - 차량 DTC를 읽고 센서 값을 보는 등의 기능을 갖춘 진단기 프로그램 제작
+        - 게이트웨이와 통신하기 위한 vsomeip, DoIP 클라이언트 로직 구현
+        - **단순 파일 전송기 → 차량 기능 제어판:** 이전에는 단순히 `.bin` 파일을 선택해서 보내는 기능만 있었다면, 이제는 PC 프로그램에 **"자동주차 기능 켜기/끄기" 체크박스, "긴급제동 민감도 조절" 슬라이더** 등을 만들 수 있습니다.
+        - 사용자가 GUI에서 이런 옵션들을 조작하면, PC 프로그램이 그에 맞는 **설정 파일(`config.json` 등)을 실시간으로 생성**하여 게이트웨이를 통해 STM으로 전송하는 방식으로 구현합니다.
+        - 이는 사용자가 훨씬 더 쉽게 차량의 기능을 OTA로 제어하게 만들어주므로, 개발의 보람도 더 커질 것입니다.
 
 ---
 
-## 👨‍💻 개발 환경
+[OTA 업데이트 기능 아이디어 (STM의 역할 재정의)](https://www.notion.so/OTA-STM-27ebbe43c24780aea613f4ebfcb4fc32?pvs=21)
 
-- MCU: Infineon AURIX TC375
-- IDE: AURIX Development Studio
-- 언어: C
-- 디버깅: On-Chip Debugger via USB
-- 디버깅툴: UDE Starterkit
+[인터페이스 정의](https://www.notion.so/27ebbe43c2478056aa55fb6cc04c0941?pvs=21)
+
+[**데모 시나리오**](https://www.notion.so/27ebbe43c2478058a952ff0d8df5870d?pvs=21)
+
+[업무 배분](https://www.notion.so/27ebbe43c24780f9a0abd8ea894c197f?pvs=21)
+
+[업무 순서](https://www.notion.so/27ebbe43c24780468d7aed4f358b3692?pvs=21)
 
 ---
 
-## 📝 라이선스
-
-이 프로젝트는 교육 목적으로 사용되며 별도의 상업적 이용을 허가하지 않습니다.
+[vsomeip](https://www.notion.so/vsomeip-27ebbe43c24780888241e4a876203708?pvs=21)
