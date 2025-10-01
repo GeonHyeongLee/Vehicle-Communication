@@ -1,15 +1,5 @@
 # 🚀Project SYNAPSE: SDV 기반 무선 OTA 업데이트 및 상태 진단 시스템🚀
 
-![image.png](attachment:20bac19e-c663-45cc-bc53-31d9084a3415:image.png)
-
-![image.png](attachment:e7c78281-aa7d-4475-8c36-ac00d888a43f:image.png)
-
----
-
-![image.png](attachment:9766aaa3-8218-4b2d-964f-2909cfe516b6:image.png)
-
----
-
 ### **## 팀 구성**
 
 - **[역할 1] 임베디드 시스템 담당자**
