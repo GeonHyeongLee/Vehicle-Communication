@@ -2,57 +2,57 @@ IfxPsi5s_PinMap.o :	../Libraries/iLLD/TC37A/Tricore/_PinMap/IfxPsi5s_PinMap.c
 ../Libraries/iLLD/TC37A/Tricore/_PinMap/IfxPsi5s_PinMap.c :
 IfxPsi5s_PinMap.o :	..\Libraries\iLLD\TC37A\Tricore\_PinMap\IfxPsi5s_PinMap.h
 ..\Libraries\iLLD\TC37A\Tricore\_PinMap\IfxPsi5s_PinMap.h :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_reg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_regdef.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPsi5s_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPsi5s_cfg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Configurations\Ifx_Cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Configurations\Ifx_Cfg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_reg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPsi5s_regdef.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPsi5s_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPsi5s_cfg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Configurations\Ifx_Cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Configurations\Ifx_Cfg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
 IfxPsi5s_PinMap.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
 "C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
-IfxPsi5s_PinMap.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
+IfxPsi5s_PinMap.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :

@@ -2,113 +2,113 @@ IfxCpu.o :	../Libraries/iLLD/TC37A/Tricore/Cpu/Std/IfxCpu.c
 ../Libraries/iLLD/TC37A/Tricore/Cpu/Std/IfxCpu.c :
 IfxCpu.o :	..\Libraries\iLLD\TC37A\Tricore\Cpu\Std\IfxCpu.h
 ..\Libraries\iLLD\TC37A\Tricore\Cpu\Std\IfxCpu.h :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxCpu_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxCpu_cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Configurations\Ifx_Cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Configurations\Ifx_Cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxCpu_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxCpu_cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_Intrinsics.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\Compilers.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Configurations\Ifx_Cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Configurations\Ifx_Cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
 IfxCpu.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
 "C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxScu_PinMap.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxScu_PinMap.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsPm.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsPm.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPms_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPms_cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsEvr.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsEvr.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_bf.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_bf.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_reg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_reg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_regdef.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_regdef.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Irq\IfxCpu_Irq.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Irq\IfxCpu_Irq.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Src\Std\IfxSrc.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Src\Std\IfxSrc.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxSrc_cfg.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxSrc_cfg.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_bf.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_bf.h" :
-IfxCpu.o :	"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
-"C:\\First_project\\project_final\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Platform_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_TypesTasking.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu_IntrinsicsTasking.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\Ifx_TypesReg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSrc_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxStm_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxScu_cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxScu_bf.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.asm.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxScu_PinMap.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxScu_PinMap.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Port\Std\IfxPort.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPort_cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPort_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Service\\CpuGeneric\_Utilities\Ifx_Assert.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxSmu_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxDmu_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsPm.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsPm.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPms_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxPms_cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsEvr.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Pms\Std\IfxPmsEvr.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_bf.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_bf.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_reg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_reg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_regdef.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxPms_regdef.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Irq\IfxCpu_Irq.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Irq\IfxCpu_Irq.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\Ifx_Types.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Src\Std\IfxSrc.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Src\Std\IfxSrc.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxSrc_cfg.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxSrc_cfg.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuCcu.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_bf.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCpu_bf.h" :
+IfxCpu.o :	"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h"
+"C:\\Second_project\\second_project\\second_project\\src\\Libraries\\iLLD\\TC37A\\Tricore\Scu\Std\IfxScuWdt.h" :
