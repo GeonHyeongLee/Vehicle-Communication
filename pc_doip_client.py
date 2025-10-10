@@ -25,35 +25,20 @@ def unwrap_doip(doip_packet):
         raise ValueError("DoIP payload length mismatch")
     return uds_message
 
-# --- 최종 수정된 DTC 포맷 변환 함수 ---
 def format_dtc(dtc_bytes):
-    """3바이트 DTC를 UDS 표준 5자리 문자열로 올바르게 변환하는 함수"""
-    if len(dtc_bytes) != 3:
-        return "Invalid DTC format"
-        
+    if len(dtc_bytes) != 3: return "Invalid DTC format"
     first_byte = dtc_bytes[0]
-    
-    # 1. 첫 알파벳 결정
     dtc_type_map = {0b00: 'P', 0b01: 'C', 0b10: 'B', 0b11: 'U'}
     first_char = dtc_type_map.get(first_byte >> 6, '?')
-    
-    # 2. 두 번째 숫자 결정
     second_char = (first_byte >> 4) & 0x03
-    
-    # 3. 나머지 세 숫자 결정 (16진수 문자열로 조합)
-    #    (이전 코드의 버그를 수정한 부분)
     last_three_chars = f"{(first_byte & 0x0F):X}{dtc_bytes[1]:02X}{dtc_bytes[2]:02X}"
-
-    # 최종 조합
     return f"{first_char}{second_char}{last_three_chars}"
-# --- 수정 끝 ---
 
-
+# --- 기능 함수들 ---
 def request_sensor_data():
     """레이저 센서 데이터 요청 함수"""
     uds_request = bytes([0x22, 0x10, 0x00])
     update_result_text(f"[*] DID 0x1000 요청 전송 중...")
-    
     try:
         uds_response = send_and_receive_doip(uds_request)
         if uds_response and uds_response[0] == 0x62:
@@ -68,12 +53,10 @@ def request_dtc_data():
     """DTC 정보 요청 함수"""
     uds_request = bytes([0x19, 0x02, 0xFF])
     update_result_text(f"[*] DTC 정보 요청 전송 중...")
-    
     try:
         uds_response = send_and_receive_doip(uds_request)
         if uds_response and uds_response[0] == 0x59:
             dtc_data = uds_response[3:]
-            
             if not dtc_data:
                 update_result_text("[+] 고장 코드가 없습니다.")
             else:
@@ -81,15 +64,32 @@ def request_dtc_data():
                 for i in range(0, len(dtc_data), 4):
                     dtc_chunk = dtc_data[i:i+4]
                     if len(dtc_chunk) == 4:
-                        dtc_code_bytes = dtc_chunk[0:3]
-                        dtc_status = dtc_chunk[3]
+                        dtc_code_bytes, dtc_status = dtc_chunk[0:3], dtc_chunk[3]
                         formatted_dtc = format_dtc(dtc_code_bytes)
                         dtc_list.append(f"  - {formatted_dtc} (상태: 0x{dtc_status:02X})")
-                
                 update_result_text("[+] 감지된 고장 코드:\n" + "\n".join(dtc_list))
         else:
             update_result_text(f"[-] ECU 부정 응답: {uds_response.hex().upper()}")
-            
+    except Exception as e:
+        update_result_text(f"[!] 에러: {e}")
+
+# --- ✨ 새로 추가된 기능 함수 ---
+def write_aeb_flag(is_on: bool):
+    """AEB 기능 플래그를 ON/OFF 하는 SID 0x2E 요청을 보내는 함수"""
+    new_data = 0x01 if is_on else 0x00
+    # UDS 요청: SID 0x2E, DID 0x2000, 새로운 데이터 1바이트
+    uds_request = bytes([0x2E, 0x20, 0x00, new_data])
+    
+    status_text = 'ON' if is_on else 'OFF'
+    update_result_text(f"[*] AEB 기능 {status_text} 요청 전송 중...")
+    
+    try:
+        uds_response = send_and_receive_doip(uds_request)
+        # 0x2E에 대한 긍정 응답은 0x6E
+        if uds_response and uds_response[0] == 0x6E:
+            update_result_text(f"[+] AEB 기능이 성공적으로 {status_text} 되었습니다.")
+        else:
+            update_result_text(f"[-] ECU 부정 응답: {uds_response.hex().upper()}")
     except Exception as e:
         update_result_text(f"[!] 에러: {e}")
 
@@ -110,19 +110,30 @@ def update_result_text(text):
     result_text.insert(tk.END, text)
     result_text.config(state=tk.DISABLED)
 
-# --- GUI 생성 ---
+# --- GUI 생성 (✨ 수정된 부분) ---
 window = tk.Tk()
 window.title("ECU 진단 툴")
-window.geometry("400x200")
+window.geometry("550x200") # 창 너비 확장
 
-button_frame = tk.Frame(window)
-button_frame.pack(pady=10)
+# 상단 버튼 프레임
+top_button_frame = tk.Frame(window)
+top_button_frame.pack(pady=5)
 
-sensor_button = tk.Button(button_frame, text="레이저 센서 값 읽기 (DID 0x1000)", command=request_sensor_data)
+sensor_button = tk.Button(top_button_frame, text="레이저 센서 값 읽기 (DID 0x1000)", command=request_sensor_data)
 sensor_button.pack(side=tk.LEFT, padx=5)
 
-dtc_button = tk.Button(button_frame, text="DTC 정보 읽기 (SID 0x19)", command=request_dtc_data)
+dtc_button = tk.Button(top_button_frame, text="DTC 정보 읽기 (SID 0x19)", command=request_dtc_data)
 dtc_button.pack(side=tk.LEFT, padx=5)
+
+# 하단 버튼 프레임 (새로 추가)
+bottom_button_frame = tk.Frame(window)
+bottom_button_frame.pack(pady=5)
+
+aeb_on_button = tk.Button(bottom_button_frame, text="AEB 기능 ON", command=lambda: write_aeb_flag(True))
+aeb_on_button.pack(side=tk.LEFT, padx=5)
+
+aeb_off_button = tk.Button(bottom_button_frame, text="AEB 기능 OFF", command=lambda: write_aeb_flag(False))
+aeb_off_button.pack(side=tk.LEFT, padx=5)
 
 result_text = scrolledtext.ScrolledText(window, height=5, font=("Helvetica", 12))
 result_text.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)

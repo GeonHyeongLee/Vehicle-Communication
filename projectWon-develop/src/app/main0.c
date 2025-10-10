@@ -15,13 +15,17 @@ void main0 (void)
 
     // 사용자 인증 절차 실행(암호 기반 시동)
     // authenticate();
+    int distance;
 
     while (1)
     {
         // 현재 상태에 따라 차량의 동작을 제어하는 상태 머신 처리
         // 사용자의 키 입력, 센서 값 등에 따라 상태를 변경하고 그에 맞는 행동 수행
-        //handleStateMachine(&motorState);
+        handleStateMachine(&motorState);
         diagnoseTofSensor();
-        delayMs(10);
+        distance = getDistanceByUltra();
+        myPrintf("distance : %f\n", distance);
+
+        delayMs(100);
     }
 }

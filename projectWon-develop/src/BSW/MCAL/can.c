@@ -1,7 +1,9 @@
 #include "can.h"
 #include "tof.h"
-#include "dtc.h"
 #include "ultrasonic.h"
+
+#include "dtc.h" // dtc 정보 읽기용
+#include "config.h" // ota용 플래그 쓰기용
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
@@ -177,7 +179,7 @@ void udsHandler (unsigned char *rxData, int rxLen)
                 {
                     case 0x1000 :
                     { // 레이저 센서 거리 요청
-                        // 1. tofGetValue()가 mm 단위를 반환한다고 약속합니다.
+                      // 1. tofGetValue()가 mm 단위를 반환한다고 약속합니다.
                         uint16 distance_mm = (uint16) tofGetValue();
 
                         // 2. 이 mm 값을 UDS 페이로드에 담아 전송합니다.
@@ -245,12 +247,49 @@ void udsHandler (unsigned char *rxData, int rxLen)
                 }
             }
 
+            // SID 0x2E (데이터 쓰기) 처리 로직 추가
+            else if (SID == 0x2E && sfLen >= 4) // SID(1) + DID(2) + Data(1 이상)
+            {
+                uint16 DID = ((uint16) rxData[2] << 8) | rxData[3];
+                // AEB 기능 플래그 DID(0x2000)가 맞는지 확인
+                if (DID == 0x2000)
+                {
+                    uint8 new_status = rxData[4]; // 0x01 = ON, 0x00 = OFF
+
+                    // config 모듈의 g_config 변수 값을 직접 변경
+                    // ==는 '같은지 비교하라'는 비교 연산자
+                    // 만약 0x01이 들어왔으면 0x01 == 0x01이므로 true여서 isAebEnabled = 1
+                    // 만약 0x00이 들어왔으면 0x00 == 0x01이므로 flase이기에 isAebEnabled = 0
+                    g_config.isAebEnabled = (new_status == 0x01);
+
+
+                    // 진짜 바뀌는지 안 바뀌는지 확인해보기 위한 코드
+                    if (g_config.isAebEnabled) {
+                        myPrintf("AEB Master Switch ON\n");
+                    }
+                    else {
+                        myPrintf("AEB Master Switch OFF\n");
+                    }
+                    // (참고: 실제 제품에서는 이 시점에 변경 사항을 DFlash에 저장하라는 'Dirty' 플래그를 설정합니다)
+
+                    // "쓰기 완료" 긍정 응답 전송
+                    uint8 positive_response[] = {0x6E, 0x20, 0x00}; // 0x6E = 0x2E + 0x40
+                    isotp_send_response(0x7E8, positive_response, sizeof(positive_response));
+                }
+                else
+                {
+                    // 지원하지 않는 DID에 대한 부정 응답
+                    uint8 nr_payload[3] = {0x7F, 0x2E, 0x31}; // 0x31 = requestOutOfRange
+                    isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                }
+            }
+
             break;
         }
 
         case 0x10 :
         { // FF (First Frame) - 긴 요청 수신
-            // (현재는 간단히 FC만 보내는 로직)
+          // (현재는 간단히 FC만 보내는 로직)
             uint8 fc[8] = {0x30, 0x00, 0x00};
             canSend8(0x7E8, fc); // FF에 대한 FC 응답
             break;

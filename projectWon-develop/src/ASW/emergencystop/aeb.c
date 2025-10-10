@@ -1,4 +1,5 @@
 #include "aeb.h"
+#include "config.h"
 
 /*********************************************************************************************************************/
 
@@ -32,7 +33,7 @@ void emergencyBuzzer (void)
 
 // 긴급 제동 수행 함수
 // AEB가 작동하면 현재 속도로 후진한 후 정지시킴
-void performEmergencyStop(void)
+void performEmergencyStop (void)
 {
     motorMoveReverse(motorState.currentDuty);  // 현재 듀티만큼 후진
     delayMs(REVERSE_TIME_MS);                  // 일정 시간 후진 유지
@@ -46,8 +47,17 @@ void performEmergencyStop(void)
 // g_TofValue: 현재 측정된 전방 거리(mm)
 void updateAebFlagByTof (unsigned int g_TofValue)
 {
+
+    // --- ✨ 새로 추가된 부분: 마스터 스위치 확인 ---
+    // (이중 안전 장치)
+    if (g_config.isAebEnabled == false)
+    {
+        aebFlag = false; // 실시간 트리거 강제 해제
+        return;          // 함수 즉시 종료
+    }
+
     // TOF 센서가 꺼진 상태면 AEB도 무조건 OFF
-    if(tofFlag == false)
+    if (tofFlag == false)
     {
         aebFlag = false;        // AEB 해제
         g_TofValue = 5000;      // 거리 값을 충분히 멀다고 가정 (초기화용)
