@@ -30,4 +30,7 @@ typedef enum ultradir
 void ultrasonicInit(void);
 int getDistanceByUltra(UltraDir dir);
 
+// ✨ 새로 추가할 함수 선언 (cm 단위 거리를 float으로 반환)
+float ultrasonic_getDistanceCm(UltraDir dir);
+
 #endif /* BSW_IO_ULTRASONIC_H_ */

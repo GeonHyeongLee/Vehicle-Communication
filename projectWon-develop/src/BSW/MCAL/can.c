@@ -191,13 +191,32 @@ void udsHandler (unsigned char *rxData, int rxLen)
                         break;
                     }
                     case 0x1001 :
-                    { // 초음파 (좌)
-                        uint16 value = (uint16) getDistanceByUltra(ULT_LEFT);
-                        uint8 payload[5] = {0x62, 0x10, 0x01, (uint8) (value >> 8), (uint8) (value & 0xFF)};
+                    { // 초음파 (좌) 센서 거리 요청
+                        // 1. 좌측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
+                        float distance_cm = ultrasonic_getDistanceCm(ULT_LEFT);
+
+                        // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
+                        if (distance_cm < 0) {
+                            uint8 nr_payload[3] = {0x7F, 0x22, 0x31}; // 0x31는 requestOutOfRange
+                            isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                            break;
+                        }
+
+                        // 3. float 값을 정수로 변환(소수점 첫째 자리까지 표현하기 위해 10 곱함)
+                        // ex) 15.7cm => 157
+                        uint16 scaled_distance = (uint16)(distance_cm * 10.0f);
+
+                        // 4. 변환된 2바이트 정수 값을 페이로드에 담아 전송
+                        uint8 payload[5] = {0x62, 0x10, 0x01,
+                                (uint8)(scaled_distance >> 8),
+                                (uint8)(scaled_distance & 0xFF)
+                        };
+
                         isotp_send_response(0x7E8, payload, sizeof(payload));
+
                         break;
                     }
-                        // (다른 초음파 센서 DID들도 여기에 포함)
+
 
                     case 0x0001 :
                     { // 확인용 테스트
