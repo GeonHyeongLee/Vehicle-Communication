@@ -52,9 +52,9 @@ float ultrasonic_getDistanceFiltered(UltraDir dir)
 
 const UltPin ULT_PINS[ULT_SENSORS_NUM] = {
         // shiled 씌우고 테스트하느라 잠시 ULT_LEFT의 핀을 trig = 13.2, echo = 13.1로 바꾸겠다
+        //[ULT_LEFT] = {.trigger = {&MODULE_P13, 2}, .echo = {&MODULE_P13, 1}},
 
-        //[ULT_LEFT] = {.trigger = {&MODULE_P15, 2}, .echo = {&MODULE_P15, 3}},
-        [ULT_LEFT] = {.trigger = {&MODULE_P13, 2}, .echo = {&MODULE_P13, 1}},
+        [ULT_LEFT] = {.trigger = {&MODULE_P15, 2}, .echo = {&MODULE_P15, 3}},
         [ULT_RIGHT] = {.trigger = {&MODULE_P10, 5}, .echo = {&MODULE_P02, 4}},
         [ULT_REAR] = {.trigger = {&MODULE_P02, 5}, .echo = {&MODULE_P02, 3}}
 };

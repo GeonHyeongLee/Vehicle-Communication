@@ -5,6 +5,7 @@
 //#include "IfxFlash.h"
 
 // .h 파일에서 extern으로 선언했던 변수의 실체
+
 SystemConfig g_config;
 
 // 설정값을 초기화하는 함수 (부팅 시 1회 호출)
@@ -14,7 +15,27 @@ void config_init(void)
 
     // 지금은 우선 기본값으로 초기화합니다.
     g_config.isAebEnabled = true; // 기본값은 ON
+    strcpy(g_config.partNumber, "RC-CAR-CRTL-V1.0");
+    strcpy(g_config.serialNumber, "20250428-001");
+    strcpy(g_config.vin, "KR01CAR00PS000001");
+    strcpy(g_config.manufacturingDate, "2025-10-22");
+    strcpy(g_config.supplier, "Hyundai Autoever");
 }
+
+// ECU가 SID 0x22로 지원하는 모든 DID 목록
+uint16 SUPPORTED_DIDS[] = {
+        0x1000, // 레이저 센서 거리
+        0x1001, // 초음파(좌) 센서 거리
+        0xF187, // ECU 부품 번호
+        0xF18C, // ECU 시리얼 번호
+        0xF190, // 차대번호(VIN)
+        0xF192, // ECU 공급업체 정보
+        0xF193, // ECU 제조 날짜
+        0xF1A0 // 지원 DID 목록
+};
+
+uint8 NUM_SUPPORTED_DIDS = sizeof(SUPPORTED_DIDS) / sizeof(uint16);
+
 
 // 주기적으로 호출될 관리 함수
 void config_mainFunction(void)

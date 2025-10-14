@@ -190,14 +190,113 @@ void udsHandler (unsigned char *rxData, int rxLen)
                         isotp_send_response(0x7E8, payload, sizeof(payload));
                         break;
                     }
+                    case 0xF187 :
+                    { // ECU 하드웨어 부품 번호 요청
+                        uint8 payload[50]; // 문자열을 담을 충분한 공간
+                        uint16 plen = 0;
+
+                        // UDS 긍정 응답 헤더
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0x87;
+
+                        // 실제 데이터 (문자열) 복사
+                        memcpy(&payload[plen], g_config.partNumber, strlen(g_config.partNumber));
+                        plen += strlen(g_config.partNumber);
+
+                        // isotp_send_response가 알아서 다중 프레임(FF/CF)으로 보낼 것임
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+                    }
+
+                    case 0xF18C :
+                    { // ECU 고유 시리얼 번호 요청
+                        uint8 payload[50];
+                        uint16 plen = 0;
+
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0x8C;
+
+                        memcpy(&payload[plen], g_config.serialNumber, strlen(g_config.serialNumber));
+                        plen += strlen(g_config.serialNumber);
+
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+                    }
+
+                    case 0xF190 :
+                    { // 차대번호(VIN) 요청
+                        uint8 payload[50];
+                        uint16 plen = 0;
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0x90;
+
+                        memcpy(&payload[plen], g_config.vin, strlen(g_config.vin));
+                        plen += strlen(g_config.vin);
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+                    }
+
+                    case 0xF192 :
+                    { // ECU 제조 날짜 요청
+                        uint8 payload[50];
+                        uint16 plen = 0;
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0x90;
+
+                        memcpy(&payload[plen], g_config.manufacturingDate, strlen(g_config.manufacturingDate));
+                        plen += strlen(g_config.manufacturingDate);
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+                    }
+
+                    case 0xF193 :
+                    { // ECU 공급업체 정보 요청
+                        uint8 payload[50];
+                        uint16 plen = 0;
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0x90;
+                        memcpy(&payload[plen], g_config.supplier, strlen(g_config.supplier));
+                        plen += strlen(g_config.supplier);
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+                    }
+
+                    case 0xF1A0 :
+                    { // 지원 DID 목록 요청
+                        uint8 payload[50];
+                        uint16 plen = 0;
+
+                        // UDS 긍정 응답 헤더
+                        payload[plen++] = 0x62;
+                        payload[plen++] = 0xF1;
+                        payload[plen++] = 0xA0;
+
+                        // config.c에 정의된 지원 DID 목록 배열 순회하며
+                        // 각 DID 2바이트씩 페이로드에 추가
+                        for (int i = 0; i < NUM_SUPPORTED_DIDS; i++) {
+                            payload[plen++] = (uint8)(SUPPORTED_DIDS[i]>>8); // DID 상위 바이트
+                            payload[plen++] = (uint8)(SUPPORTED_DIDS[i]&0xFF); // DID 하위 바이트
+                        }
+
+                        // 최종 페이로드 전송
+                        isotp_send_response(0x7E8, payload, plen);
+                        break;
+
+                    }
+
                     case 0x1001 :
                     { // 초음파 (좌) 센서 거리 요청
-                        // 1. 좌측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
+                      // 1. 좌측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
                         float distance_cm = ultrasonic_getDistanceCm(ULT_LEFT);
 
-
                         // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
-                        if (distance_cm < 0) {
+                        if (distance_cm < 0)
+                        {
                             uint8 nr_payload[3] = {0x7F, 0x22, 0x31}; // 0x31는 requestOutOfRange
                             isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
                             break;
@@ -205,33 +304,17 @@ void udsHandler (unsigned char *rxData, int rxLen)
 
                         // 3. float 값을 정수로 변환(소수점 첫째 자리까지 표현하기 위해 10 곱함)
                         // ex) 15.7cm => 157
-                        uint16 scaled_distance = (uint16)(distance_cm * 10.0f);
+                        uint16 scaled_distance = (uint16) (distance_cm * 10.0f);
 
                         // 4. 변환된 2바이트 정수 값을 페이로드에 담아 전송
-                        uint8 payload[5] = {0x62, 0x10, 0x01,
-                                (uint8)(scaled_distance >> 8),
-                                (uint8)(scaled_distance & 0xFF)
-                        };
+                        uint8 payload[5] = {0x62, 0x10, 0x01, (uint8) (scaled_distance >> 8), (uint8) (scaled_distance
+                                & 0xFF)};
 
                         isotp_send_response(0x7E8, payload, sizeof(payload));
 
                         break;
                     }
 
-
-                    case 0x0001 :
-                    { // 확인용 테스트
-                        uint8 payload[20] = {0};
-                        uint16 plen = 0;
-                        payload[plen++] = 0x62;
-                        payload[plen++] = 0x00;
-                        payload[plen++] = 0x01;
-                        const uint8 data_ex[] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0x11, 0x22, 0x33, 0x44};
-                        memcpy(&payload[plen], data_ex, sizeof(data_ex));
-                        plen += sizeof(data_ex);
-                        isotp_send_response(0x7E8, payload, plen);
-                        break;
-                    }
                     default :
                     { // 메뉴판에 없는 DID
                         uint8 nr_payload[3] = {0x7F, 0x22, 0x31};
@@ -282,12 +365,13 @@ void udsHandler (unsigned char *rxData, int rxLen)
                     // 만약 0x00이 들어왔으면 0x00 == 0x01이므로 flase이기에 isAebEnabled = 0
                     g_config.isAebEnabled = (new_status == 0x01);
 
-
                     // 진짜 바뀌는지 안 바뀌는지 확인해보기 위한 코드
-                    if (g_config.isAebEnabled) {
+                    if (g_config.isAebEnabled)
+                    {
                         myPrintf("AEB Master Switch ON\n");
                     }
-                    else {
+                    else
+                    {
                         myPrintf("AEB Master Switch OFF\n");
                     }
                     // (참고: 실제 제품에서는 이 시점에 변경 사항을 DFlash에 저장하라는 'Dirty' 플래그를 설정합니다)

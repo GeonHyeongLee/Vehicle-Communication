@@ -15,7 +15,8 @@ void main0 (void)
     // 사용자 인증 절차 실행(암호 기반 시동)
     // authenticate();
 
-    float distance_cm;
+    config_init();
+
 
     while (1)
     {
@@ -25,11 +26,5 @@ void main0 (void)
         diagnoseTofSensor();
         diagnoseUltrasonicSensor();
 
-        unsigned int tof_distance_mm = tofGetValue();
-        myPrintf("TOF Sensor Distance: %u mm\n", tof_distance_mm);
-
-        // 3. 500ms(0.5초) 동안 대기합니다.
-        //    이렇게 하면 1초에 2번씩만 값이 출력되어 확인하기 편해집니다.
-        delayMs(500);
     }
 }
