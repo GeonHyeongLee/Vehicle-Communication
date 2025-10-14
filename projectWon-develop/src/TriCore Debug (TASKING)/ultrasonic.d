@@ -110,3 +110,5 @@ ultrasonic.o :	"C:\\Second_project\\second_project\\second_project_git\\projectW
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCbs_regdef.h" :
 ultrasonic.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h"
 "C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h" :
+ultrasonic.o :	..\BSW\Service\dtc.h
+..\BSW\Service\dtc.h :

@@ -42,6 +42,8 @@ Libraries/iLLD/TC37A/Tricore/Can/Std \
 Libraries/iLLD/TC37A/Tricore/Cpu/Irq \
 Libraries/iLLD/TC37A/Tricore/Cpu/Std \
 Libraries/iLLD/TC37A/Tricore/Cpu/Trap \
+Libraries/iLLD/TC37A/Tricore/Evadc/Adc \
+Libraries/iLLD/TC37A/Tricore/Evadc/Std \
 Libraries/iLLD/TC37A/Tricore/Gpt12/Std \
 Libraries/iLLD/TC37A/Tricore/Gtm/Atom/Pwm \
 Libraries/iLLD/TC37A/Tricore/Gtm/Std \

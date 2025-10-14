@@ -23,18 +23,13 @@ void main0 (void)
         // 사용자의 키 입력, 센서 값 등에 따라 상태를 변경하고 그에 맞는 행동 수행
         handleStateMachine(&motorState);
         diagnoseTofSensor();
-        // ✨ 새로 만든 ultrasonic_getDistanceCm 함수를 호출
-        distance_cm = ultrasonic_getDistanceCm(ULT_LEFT);
+        diagnoseUltrasonicSensor();
 
-        if (distance_cm >= 0)
-        {
-            // 소수점 둘째 자리까지 출력
-            myPrintf("Left Ultrasonic Distance: %.2f cm\n", distance_cm);
-        }
-        else
-        {
-            myPrintf("Left Ultrasonic Error or Timeout\n");
-        }
-        delayMs(100);
+        unsigned int tof_distance_mm = tofGetValue();
+        myPrintf("TOF Sensor Distance: %u mm\n", tof_distance_mm);
+
+        // 3. 500ms(0.5초) 동안 대기합니다.
+        //    이렇게 하면 1초에 2번씩만 값이 출력되어 확인하기 편해집니다.
+        delayMs(500);
     }
 }

@@ -1,13 +1,14 @@
 #include "ultrasonic.h"
 #include "stdbool.h"
+#include "dtc.h"
 // 최근 5개 데이터 평균
 #define FILTER_BUFFER_SIZE 5
 
-// --- ✨ 수정 1: 배열 전체를 0으로 올바르게 초기화 ---
+// --- 수정 1: 배열 전체를 0으로 올바르게 초기화 ---
 static float distance_buffers[ULT_SENSORS_NUM][FILTER_BUFFER_SIZE] = {{0}};
 static int buffer_indexes[ULT_SENSORS_NUM] = {0};
 
-// --- ✨ 추가: 필터 안정화를 위한 플래그 ---
+// --- 추가: 필터 안정화를 위한 플래그 ---
 // 필터가 처음 유효한 값으로 채워졌는지 여부를 확인
 
 static bool is_filter_primed[ULT_SENSORS_NUM] = {false};
@@ -21,7 +22,7 @@ float ultrasonic_getDistanceFiltered(UltraDir dir)
     // 2. 유효한 값(0 이상)일 경우에만 필터 로직 수행
     if (new_distance >= 0)
     {
-        // --- ✨ 수정 2: 필터 안정화 로직 ---
+        // --- 수정 2: 필터 안정화 로직 ---
         // 만약 처음으로 유효한 값이 들어왔다면,
         // 버퍼 전체를 이 첫 값으로 채워서 평균이 급격하게 변하는 것을 방지합니다.
         if (is_filter_primed[dir] == false)
@@ -129,4 +130,20 @@ int getDistanceByUltra(UltraDir dir)
     int res = (int) (getTime10Ns() - start);
     if(res < 0) return -1;
     return res;
+}
+
+void diagnoseUltrasonicSensor(void) {
+    // 좌측 센서 진단
+    // cm 단위 거리 값 가져옴 (-1 : 신호 없음, -2 : 범위 초과)
+    float distance_left = ultrasonic_getDistanceCm(ULT_LEFT);
+
+    // 1. 신호/회로 고장 진단 (연결 해제)
+    // ultrasonic_getDistanceCm이 -1.0f 반환했는지 확인
+    bool isSignalFault_left = (distance_left == -1.0f);
+    dtc_updateStatus(DTC_LEFT_ULTRASONIC_TIMEOUT, isSignalFault_left);
+
+    // 2. 측정값 범위 고장 진단
+    // ultrasonic_getDistanceCm이 -2.0f 반환했는지 확인
+    bool isRangeFault_left = (distance_left == -2.0f);
+    dtc_updateStatus(DTC_LEFT_ULTRASONIC_OUTOFRANGE, isRangeFault_left);
 }

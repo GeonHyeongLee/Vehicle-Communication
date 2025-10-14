@@ -195,6 +195,7 @@ void udsHandler (unsigned char *rxData, int rxLen)
                         // 1. 좌측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
                         float distance_cm = ultrasonic_getDistanceCm(ULT_LEFT);
 
+
                         // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
                         if (distance_cm < 0) {
                             uint8 nr_payload[3] = {0x7F, 0x22, 0x31}; // 0x31는 requestOutOfRange

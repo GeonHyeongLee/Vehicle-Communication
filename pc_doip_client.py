@@ -6,9 +6,8 @@ from tkinter import scrolledtext
 RPI_HOST = '192.168.137.37' 
 DOIP_PORT = 13400
 
-# --- DoIP 헬퍼 함수 ---
+# --- DoIP 헬퍼 함수 (변경 없음) ---
 def wrap_in_doip(uds_payload):
-    """UDS 메시지를 DoIP 헤더로 감싸는 함수"""
     protocol_version = 0x02
     payload_type = 0x8001
     payload_length = len(uds_payload)
@@ -18,7 +17,6 @@ def wrap_in_doip(uds_payload):
     return bytes(doip_header) + uds_payload
 
 def unwrap_doip(doip_packet):
-    """DoIP 패킷에서 UDS 메시지를 추출하는 함수"""
     if len(doip_packet) < 8 or doip_packet[0] != 0x02:
         raise ValueError("Invalid DoIP packet")
     payload_length = int.from_bytes(doip_packet[4:8], 'big')
@@ -28,7 +26,6 @@ def unwrap_doip(doip_packet):
     return uds_message
 
 def format_dtc(dtc_bytes):
-    """3바이트 DTC를 UDS 표준 5자리 문자열로 올바르게 변환하는 함수"""
     if len(dtc_bytes) != 3: return "Invalid DTC format"
     first_byte = dtc_bytes[0]
     dtc_type_map = {0b00: 'P', 0b01: 'C', 0b10: 'B', 0b11: 'U'}
@@ -52,20 +49,28 @@ def request_laser_sensor_data():
     except Exception as e:
         update_result_text(f"[!] 에러: {e}")
 
-def request_ultrasonic_data():
+# --- ✨ 수정된 부분 ---
+def request_left_ultrasonic_data():
     """좌측 초음파 센서 데이터 요청 함수"""
-    uds_request = bytes([0x22, 0x10, 0x01])
+    uds_request = bytes([0x22, 0x10, 0x01]) # DID 0x1001 요청
     update_result_text(f"[*] DID 0x1001 요청 전송 중...")
     try:
         uds_response = send_and_receive_doip(uds_request)
         if uds_response and uds_response[0] == 0x62:
+            # 1. ECU로부터 '스케일링된 값'(cm * 10)을 정수로 받습니다.
             scaled_value = int.from_bytes(uds_response[3:], 'big')
+            
+            # 2. 10.0으로 다시 나누어 실제 cm 값으로 복원합니다.
             distance_cm = scaled_value / 10.0
+            
             update_result_text(f"[+] 좌측 초음파 센서 값: {distance_cm:.1f} cm")
+        elif uds_response and uds_response[0] == 0x7F: # 부정 응답 처리
+            update_result_text(f"[-] ECU 부정 응답: {uds_response.hex().upper()} (센서 측정 실패)")
         else:
-            update_result_text(f"[-] ECU 부정 응답: {uds_response.hex().upper()}")
+            update_result_text(f"[-] ECU 응답 형식 오류: {uds_response.hex().upper()}")
     except Exception as e:
         update_result_text(f"[!] 에러: {e}")
+# --- ✨ 수정 끝 ---
 
 def request_dtc_data():
     """DTC 정보 요청 함수"""
@@ -123,25 +128,23 @@ def update_result_text(text):
     result_text.insert(tk.END, text)
     result_text.config(state=tk.DISABLED)
 
-# --- GUI 생성 ---
+# --- GUI 생성 (변경 없음) ---
 window = tk.Tk()
 window.title("ECU 진단 툴")
 window.geometry("720x200")
 
-# 상단 버튼 프레임
 top_button_frame = tk.Frame(window)
 top_button_frame.pack(pady=5)
 
-laser_sensor_button = tk.Button(top_button_frame, text="레이저 센서 읽기 (DID 0x1000)", command=request_laser_sensor_data)
-laser_sensor_button.pack(side=tk.LEFT, padx=5)
+laser_button = tk.Button(top_button_frame, text="레이저 센서 읽기", command=request_laser_sensor_data)
+laser_button.pack(side=tk.LEFT, padx=5)
 
-ultrasonic_sensor_button = tk.Button(top_button_frame, text="초음파 센서 읽기 (DID 0x1001)", command=request_ultrasonic_data)
-ultrasonic_sensor_button.pack(side=tk.LEFT, padx=5)
+ultrasonic_button = tk.Button(top_button_frame, text="좌측 초음파 읽기", command=request_left_ultrasonic_data)
+ultrasonic_button.pack(side=tk.LEFT, padx=5)
 
-dtc_button = tk.Button(top_button_frame, text="DTC 정보 읽기 (SID 0x19)", command=request_dtc_data)
+dtc_button = tk.Button(top_button_frame, text="DTC 정보 읽기", command=request_dtc_data)
 dtc_button.pack(side=tk.LEFT, padx=5)
 
-# 하단 버튼 프레임
 bottom_button_frame = tk.Frame(window)
 bottom_button_frame.pack(pady=5)
 
@@ -157,3 +160,4 @@ result_text.insert(tk.END, "버튼을 눌러 진단을 시작하세요.")
 result_text.config(state=tk.DISABLED)
 
 window.mainloop()
+
