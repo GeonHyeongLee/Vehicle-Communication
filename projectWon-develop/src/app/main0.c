@@ -11,12 +11,9 @@ MotorState motorState = {.baseDuty = 50,      // 기본 주행 속도(Duty 비�
 void main0 (void)
 {
     systemInit();
-
+    session_init();
     // 사용자 인증 절차 실행(암호 기반 시동)
     // authenticate();
-
-    config_init();
-
 
     while (1)
     {
@@ -25,6 +22,9 @@ void main0 (void)
         handleStateMachine(&motorState);
         diagnoseTofSensor();
         diagnoseUltrasonicSensor();
+        IfxScuWdt_serviceCpuWatchdog(IfxScuWdt_getCpuWatchdogPassword());
 
     }
 }
+
+

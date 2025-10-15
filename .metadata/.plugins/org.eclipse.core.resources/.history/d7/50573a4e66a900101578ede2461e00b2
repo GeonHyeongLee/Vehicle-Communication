@@ -1,0 +1,45 @@
+#include "session.h"
+#include "systick.h" // 1ms 타이머 변수 g_systick_1ms 사용을 위해 (가정)
+#include ""
+// 세션 타임아웃 시간 (5초 = 5000ms)
+#define S3_SERVER_TIMEOUT 5000
+
+// --- 내부 변수 ---
+static DiagnosticSession g_currentSession = SESSION_DEFAULT;
+static uint32 g_sessionTimer = 0;
+
+void session_init(void) {
+    g_currentSession = SESSION_DEFAULT;
+    g_sessionTimer = g_systick_1ms; // 부팅 시 현재 시간으로 타이머 초기화
+}
+
+// 이 함수는 main 루프에서 주기적으로 호출되어야 합니다.
+void session_mainFunction(void) {
+    // Default 세션에서는 타이머를 검사할 필요 없음
+    if (g_currentSession == SESSION_DEFAULT) {
+        return;
+    }
+
+    // 현재 시간과 마지막 통신 시간의 차이가 타임아웃을 초과했는지 확인
+    if ((g_systick_1ms - g_sessionTimer) > S3_SERVER_TIMEOUT) {
+        // 타임아웃 발생! Default 세션으로 강제 복귀
+        g_currentSession = SESSION_DEFAULT;
+        // (필요시 myPrintf 등으로 상태 변경 알림)
+    }
+}
+
+void session_resetTimer(void) {
+    // 통신이 수신될 때마다 타이머를 현재 시간으로 리셋
+    g_sessionTimer = g_systick_1ms;
+}
+
+DiagnosticSession session_getCurrent(void) {
+    return g_currentSession;
+}
+
+void session_setCurrent(DiagnosticSession new_session) {
+    if (g_currentSession != new_session) {
+        g_currentSession = new_session;
+        session_resetTimer(); // 세션이 변경되면 타이머 즉시 리셋
+    }
+}

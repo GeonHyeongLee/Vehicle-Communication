@@ -12,10 +12,14 @@
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 
+#include "IfxSrc.h"
 #include "IfxGpt12.h"
 #include "priority.h"
 #include "led.h"
 #include "buzzerport.h"
+#include "session.h"
+#include "tof.h"
+#include "ultrasonic.h"
 
 //#define BEEP_INITIAL_INTERVAL 8000      // 초기 주기 (느리게 시작)
 #define BEEP_MIN_INTERVAL     1000      // 최소 주기 (0.1초 정도)
@@ -24,6 +28,8 @@
 void gpt1_init ();
 void gpt2_init (void);
 void gpt12Init(void);
+
+
 
 void Gpt1_Interrupt_Enable (void);
 void Gpt1_Interrupt_Disable (void);

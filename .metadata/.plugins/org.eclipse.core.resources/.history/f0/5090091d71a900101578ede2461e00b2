@@ -1,0 +1,14 @@
+#ifndef SYSTICK_H_
+#define SYSTICK_H_
+
+#include "Ifx_Types.h"
+
+// --- 외부 공개 변수 ---
+// 시스템 부팅 후 경과된 시간을 1ms 단위로 저장하는 전역 변수
+extern volatile uint32 g_systick_1ms;
+
+// --- 외부 공개 함수 ---
+// 시스템 틱 타이머를 초기화하고 시작하는 함수
+void systick_init(void);
+
+#endif /* SYSTICK_H_ */

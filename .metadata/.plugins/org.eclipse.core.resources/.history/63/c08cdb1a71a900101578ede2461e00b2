@@ -1,0 +1,57 @@
+#include "systick.h"
+#include "IfxStm.h"     // ✨ '내비게이션 앱' 역할을 하는 메인 STM 헤더를 포함합니다.
+#include "IfxCpu_Irq.h" // 인터럽트 관련 헤더
+
+// ✨ 프로젝트 설정 헤더를 포함합니다.
+#include "Ifx_Cfg.h"
+
+// ✨ 만약 Ifx_Cfg.h에 틱 정의가 없다면, 일반적인 100MHz 클럭 기준으로 직접 정의합니다.
+#ifndef IFX_CFG_STM_TICKS_PER_MS
+#define IFX_CFG_STM_TICKS_PER_MS (100000)
+#endif
+
+// --- 전역 변수 및 인터럽트 우선순위 정의 (기존과 동일) ---
+volatile uint32 g_systick_1ms = 0;
+#define ISR_PRIORITY_SYSTICK 20
+
+// =========================================================================
+// 1ms 주기 STM 인터럽트 서비스 루틴 (ISR)
+// =========================================================================
+IFX_INTERRUPT(Stm_Isr, 0, ISR_PRIORITY_SYSTICK);
+void Stm_Isr(void)
+{
+    // 1. 1ms가 경과했으므로 카운터를 1 증가시킵니다.
+    g_systick_1ms++;
+
+    // 2. 다음 1ms 뒤에 다시 인터럽트가 발생하도록 알람 시간을 업데이트합니다.
+    //    IfxStm_increaseCompare 함수는 내부적으로 현재 Compare 레지스터 값을 읽어
+    //    주어진 틱 만큼 더한 뒤 다시 설정해주는 편리한 함수입니다.
+    IfxStm_increaseCompare(&MODULE_STM0, IfxStm_Compare_0, IFX_CFG_STM_TICKS_PER_MS);
+}
+
+// =========================================================================
+// 시스템 틱 타이머 초기화 함수
+// =========================================================================
+void systick_init(void)
+{
+    // --- 1. STM 인터럽트 서비스 요청(SRC) 설정 ---
+    // STM0 모듈의 Compare 0 채널이 인터럽트를 요청할 때 사용할 설정을 구성합니다.
+    volatile Ifx_SRC_SRCR* src = IfxStm_getSrcPointer(&MODULE_STM0, IfxStm_Compare_0);
+    IfxSrc_init(src, IfxSrc_Tos_cpu0, ISR_PRIORITY_SYSTICK);
+    IfxSrc_enable(src);
+
+    // --- 2. STM Compare 기능 설정 ---
+    // "1ms 뒤에 첫 알람을 울려줘" 라고 설정하는 과정입니다.
+    IfxStm_CompareConfig stmCompareConfig;
+    IfxStm_initCompareConfig(&stmCompareConfig); // 구조체를 기본값으로 초기화
+
+    // iLLD 함수를 사용하여 1ms에 해당하는 틱 값을 안전하게 가져옵니다.
+    stmCompareConfig.ticks = IfxStm_getTicksFromMilliseconds(&MODULE_STM0, 1);
+
+    stmCompareConfig.compareRegister = IfxStm_Compare_0; // 0번 알람 다이얼을 사용
+    stmCompareConfig.triggerPriority = ISR_PRIORITY_SYSTICK; // 인터럽트 우선순위
+    stmCompareConfig.typeOfService   = IfxSrc_Tos_cpu0; // CPU0에서 처리
+
+    // 설정된 내용으로 STM Compare 기능을 초기화합니다.
+    IfxStm_initCompare(&MODULE_STM0, &stmCompareConfig);
+}

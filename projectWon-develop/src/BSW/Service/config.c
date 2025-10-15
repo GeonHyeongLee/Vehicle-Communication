@@ -31,7 +31,8 @@ uint16 SUPPORTED_DIDS[] = {
         0xF190, // 차대번호(VIN)
         0xF192, // ECU 공급업체 정보
         0xF193, // ECU 제조 날짜
-        0xF1A0 // 지원 DID 목록
+        0xF1A0, // 지원 DID 목록
+        0xF186 //  Diagnostic Session Identifier(세션 정보 요청)
 };
 
 uint8 NUM_SUPPORTED_DIDS = sizeof(SUPPORTED_DIDS) / sizeof(uint16);

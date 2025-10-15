@@ -171,6 +171,42 @@ void udsHandler (unsigned char *rxData, int rxLen)
 
             uint8 SID = rxData[1];
 
+            // SID 0x10 (Diagnostic Session Control) 처리 로직 ---
+            if (SID == 0x10 && sfLen >= 2)
+            {
+                uint8 sub_function = rxData[2];
+                // 지원하는 세션(Default, Extended)인지 확인합니다.
+                if (sub_function == SESSION_DEFAULT || sub_function == SESSION_EXTENDED)
+                {
+                    // 세션 관리 모듈을 통해 현재 세션을 변경합니다.
+                    session_setCurrent((DiagnosticSession) sub_function);
+
+                    // "세션 변경 성공" 긍정 응답을 전송합니다.
+                    uint8 payload[] = {0x50, sub_function}; // 0x50 = 0x10 + 0x40
+                    isotp_send_response(0x7E8, payload, sizeof(payload));
+                }
+                else
+                {
+                    // 지원하지 않는 세션에 대한 부정 응답
+                    uint8 nr_payload[] = {0x7F, 0x10, 0x12}; // NRC 0x12 = subFunctionNotSupported
+                    isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                }
+            }
+
+            if (SID == 0x3E)
+            {
+                uint8 sub_function = rxData[2];
+                if (sub_function == 0x00)
+                { // sub-function 0x00(응답 필요)
+                    uint8 payload[] = {0x7E, 0x00};
+                    isotp_send_response(0x7E8, payload, sizeof(payload));
+                }
+                else if (sub_function == 0x80)
+                { // sub-function 0x80 (응답 불필요)
+                    // 아무 응답도 안 보냄
+                }
+            }
+
             if (SID == 0x22 && sfLen >= 3)
             { // 03 22 10 00  =>
                 uint16 DID = ((uint16) rxData[2] << 8) | rxData[3];
@@ -278,9 +314,10 @@ void udsHandler (unsigned char *rxData, int rxLen)
 
                         // config.c에 정의된 지원 DID 목록 배열 순회하며
                         // 각 DID 2바이트씩 페이로드에 추가
-                        for (int i = 0; i < NUM_SUPPORTED_DIDS; i++) {
-                            payload[plen++] = (uint8)(SUPPORTED_DIDS[i]>>8); // DID 상위 바이트
-                            payload[plen++] = (uint8)(SUPPORTED_DIDS[i]&0xFF); // DID 하위 바이트
+                        for (int i = 0; i < NUM_SUPPORTED_DIDS; i++)
+                        {
+                            payload[plen++] = (uint8) (SUPPORTED_DIDS[i] >> 8); // DID 상위 바이트
+                            payload[plen++] = (uint8) (SUPPORTED_DIDS[i] & 0xFF); // DID 하위 바이트
                         }
 
                         // 최종 페이로드 전송
@@ -312,6 +349,18 @@ void udsHandler (unsigned char *rxData, int rxLen)
 
                         isotp_send_response(0x7E8, payload, sizeof(payload));
 
+                        break;
+                    }
+
+                    case 0xF186 :
+                    { // 현재 진단 세션 상태 요청
+                        uint8 current_session = (uint8) session_getCurrent();
+
+                        // UDS 응답: 헤더(3) + 데이터(1) = 4바이트
+                        uint8 payload[4] = {0x62, 0xF1, 0x86, // 긍정 응답 헤더
+                                current_session   // 현재 세션 값
+                                };
+                        isotp_send_response(0x7E8, payload, sizeof(payload));
                         break;
                     }
 
@@ -350,44 +399,34 @@ void udsHandler (unsigned char *rxData, int rxLen)
                 }
             }
 
-            // SID 0x2E (데이터 쓰기) 처리 로직 추가
-            else if (SID == 0x2E && sfLen >= 4) // SID(1) + DID(2) + Data(1 이상)
+            // SID 0x2E (Write Data By Identifier) 수정 ---
+            else if (SID == 0x2E && sfLen >= 4)
             {
+                // 1. 세션 확인: 이 기능은 Extended Session에서만 허용됩니다.
+                if (session_getCurrent() != SESSION_EXTENDED)
+                {
+                    // 현재 세션이 Extended가 아니면 부정 응답을 보내고 종료합니다.
+                    uint8 nr_payload[] = {0x7F, 0x2E, 0x7E}; // NRC 0x7E = subFunctionNotSupportedInActiveSession
+                    isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                    break; // 여기서 처리를 중단합니다.
+                }
+
+                // 2. (세션 확인 통과 시) 기존 쓰기 로직 실행
                 uint16 DID = ((uint16) rxData[2] << 8) | rxData[3];
-                // AEB 기능 플래그 DID(0x2000)가 맞는지 확인
                 if (DID == 0x2000)
                 {
-                    uint8 new_status = rxData[4]; // 0x01 = ON, 0x00 = OFF
-
-                    // config 모듈의 g_config 변수 값을 직접 변경
-                    // ==는 '같은지 비교하라'는 비교 연산자
-                    // 만약 0x01이 들어왔으면 0x01 == 0x01이므로 true여서 isAebEnabled = 1
-                    // 만약 0x00이 들어왔으면 0x00 == 0x01이므로 flase이기에 isAebEnabled = 0
+                    uint8 new_status = rxData[4];
                     g_config.isAebEnabled = (new_status == 0x01);
-
-                    // 진짜 바뀌는지 안 바뀌는지 확인해보기 위한 코드
-                    if (g_config.isAebEnabled)
-                    {
-                        myPrintf("AEB Master Switch ON\n");
-                    }
-                    else
-                    {
-                        myPrintf("AEB Master Switch OFF\n");
-                    }
-                    // (참고: 실제 제품에서는 이 시점에 변경 사항을 DFlash에 저장하라는 'Dirty' 플래그를 설정합니다)
-
-                    // "쓰기 완료" 긍정 응답 전송
-                    uint8 positive_response[] = {0x6E, 0x20, 0x00}; // 0x6E = 0x2E + 0x40
+                    // ... (myPrintf 등 디버깅 코드)
+                    uint8 positive_response[] = {0x6E, 0x20, 0x00};
                     isotp_send_response(0x7E8, positive_response, sizeof(positive_response));
                 }
                 else
                 {
-                    // 지원하지 않는 DID에 대한 부정 응답
-                    uint8 nr_payload[3] = {0x7F, 0x2E, 0x31}; // 0x31 = requestOutOfRange
+                    uint8 nr_payload[3] = {0x7F, 0x2E, 0x31};
                     isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
                 }
             }
-
             break;
         }
 
@@ -439,6 +478,16 @@ void canRxIsrHandler (void)
     // --- ID를 보고 교통정리 시작 ---
     if (rxID == 0x7E0) // UDS 진단 요청 ID인가?
     {
+        // 0x7E0이면 세션 연장해줘야함
+        // 근데 0x22 F186은 세션 상태 확인인데 얘도 들어가면 시간 초기화되니까 얘는 예외 처리 해줘야함
+        bool isSessionStatusPoll = (rxData[1] == 0x22 && rxData[2] == 0xF1 && rxData[3] == 0x86);
+
+        // '세션 상태 확인' 요청이 아닐 경우에만 세션 타이머를 리셋합니다.
+        if (!isSessionStatusPoll)
+        {
+            session_resetTimer();
+        }
+
         // UDS 전문 담당자를 호출합니다.
         udsHandler(rxData, rxLen);
     }

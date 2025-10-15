@@ -24,6 +24,12 @@
 #include "buzzer.h"
 #include "auth.h"
 
+#include "session.h"
+#include "config.h"
+#include "battery.h"
+#include "dtc.h"
+#include "IfxScuWdt.h"
+
 void main0(void);
 
 #endif /* ASW_APP_MAIN0_H_ */
