@@ -27,6 +27,12 @@ Release/
 build/
 .tmp_versions/
 
+# Build output directories
+Debug/
+Release/
+build/
+TriCore Debug (TASKING)/
+
 ## Precompiled Headers
 *.gch
 *.pch
