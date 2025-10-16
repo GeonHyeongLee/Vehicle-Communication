@@ -13,8 +13,16 @@
 #define DTC_TOF_OUTOFRANGE  0x810000 // B0100: ToF 센서 측정값 범위 초과
 
 // 초음파 센서(좌)
-#define DTC_LEFT_ULTRASONIC_TIMEOUT     0xC20000 // U0200 : Left_Ultrasonic 센서 통신 두절
-#define DTC_LEFT_ULTRASONIC_OUTOFRANGE  0x820000 // B0200 : Left_Ultrasonic 센서 측정값 범위 초과
+#define DTC_ULT_LEFT_TIMEOUT    0xC20000 // U0200 : Left_Ultrasonic 센서 통신 두절
+#define DTC_ULT_LEFT_OUTOFRANGE 0x820000 // B0200 : Left_Ultrasonic 센서 측정값 범위 초과
+
+// 초음파 센서(우)
+#define DTC_ULT_RIGHT_TIMEOUT    0xC20001 // U0201 : Right_Ultrasonic 센서 통신 두절
+#define DTC_ULT_RIGHT_OUTOFRANGE 0x820001 // B0201 : Right_Ultrasonic 센서 측정값 범위 초과
+
+// 초음파 센서(후방)
+#define DTC_ULT_REAR_TIMEOUT    0xC20002 // U0202 : Rear_Ultrasonic 센서 통신 두절
+#define DTC_ULT_REAR_OUTOFRANGE 0x820002 // B0202 : Rear_Ultrasonic 센서 측정값 범위 초과
 
 // 2. DTC 상태 비트 마스크 정의
 #define DTC_STATUS_TEST_FAILED (1 << 0)

@@ -218,6 +218,8 @@ Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWo
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ultrasonic.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\autopark\autopark.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\autopark\autopark.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h"
@@ -234,5 +236,3 @@ Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWo
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\config.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\battery.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\battery.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h" :

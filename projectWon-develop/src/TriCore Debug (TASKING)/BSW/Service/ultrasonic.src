@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc9932a --dep-file=BSW/Service/ultrasonic.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\auth -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\autopark -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\MCAL -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Configurations -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\app -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/ultrasonic.src ../BSW/Service/ultrasonic.c"
+	.compiler_invocation	"ctc -f cc20008a --dep-file=BSW/Service/ultrasonic.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\auth -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\autopark -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\MCAL -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Configurations -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\app -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/ultrasonic.src ../BSW/Service/ultrasonic.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/Service/ultrasonic.c'
 
@@ -16,132 +16,132 @@ $TC162
 .L35:
 ultrasonic_getDistanceFiltered:	.type	func
 	mov	d8,d4
-.L150:
+.L160:
 	mov	d4,d8
 	call	ultrasonic_getDistanceCm
-.L149:
+.L159:
 	mov	d0,#0
-.L262:
+.L287:
 	cmp.f	d15,d2,d0
 	and	d15,#6
 	ne	d15,d15,#0
-.L263:
+.L288:
 	jeq	d15,#0,.L2
-.L264:
+.L289:
 	movh.a	a15,#@his(is_filter_primed)
 	lea	a15,[a15]@los(is_filter_primed)
-.L265:
+.L290:
 	addsc.a	a15,a15,d8,#0
 	ld.bu	d15,[a15]
-.L266:
+.L291:
 	jne	d15,#0,.L3
-.L124:
+.L134:
 	mov	d0,#0
-.L151:
+.L161:
 	j	.L4
 .L5:
 	mul	d15,d0,#4
-.L267:
+.L292:
 	mul	d1,d8,#20
-.L268:
+.L293:
 	movh.a	a15,#@his(distance_buffers)
 	lea	a15,[a15]@los(distance_buffers)
-.L269:
+.L294:
 	addsc.a	a15,a15,d1,#0
-.L270:
+.L295:
 	addsc.a	a15,a15,d15,#0
-.L271:
+.L296:
 	st.w	[a15],d2
-.L272:
+.L297:
 	add	d0,#1
 .L4:
 	jlt	d0,#5,.L5
-.L125:
+.L135:
 	movh.a	a15,#@his(is_filter_primed)
 	lea	a15,[a15]@los(is_filter_primed)
-.L273:
+.L298:
 	addsc.a	a15,a15,d8,#0
-.L274:
+.L299:
 	mov	d15,#1
-.L275:
+.L300:
 	st.b	[a15],d15
 .L3:
 	mul	d15,d8,#4
-.L276:
+.L301:
 	movh.a	a15,#@his(buffer_indexes)
 	lea	a15,[a15]@los(buffer_indexes)
-.L277:
+.L302:
 	addsc.a	a15,a15,d15,#0
 	ld.w	d15,[a15]
-.L278:
+.L303:
 	mul	d15,d15,#4
-.L279:
+.L304:
 	mul	d0,d8,#20
-.L280:
+.L305:
 	movh.a	a15,#@his(distance_buffers)
 	lea	a15,[a15]@los(distance_buffers)
-.L281:
+.L306:
 	addsc.a	a15,a15,d0,#0
-.L282:
+.L307:
 	addsc.a	a15,a15,d15,#0
-.L283:
+.L308:
 	st.w	[a15],d2
-.L284:
+.L309:
 	mul	d15,d8,#4
-.L285:
+.L310:
 	movh.a	a15,#@his(buffer_indexes)
 	lea	a15,[a15]@los(buffer_indexes)
-.L286:
+.L311:
 	addsc.a	a15,a15,d15,#0
-.L287:
+.L312:
 	mul	d15,d8,#4
-.L288:
+.L313:
 	movh.a	a2,#@his(buffer_indexes)
 	lea	a2,[a2]@los(buffer_indexes)
-.L289:
+.L314:
 	addsc.a	a2,a2,d15,#0
 	ld.w	d15,[a2]
-.L290:
+.L315:
 	add	d15,#1
-.L291:
+.L316:
 	mov	d0,#5
-.L292:
+.L317:
 	div	e0,d15,d0
-.L293:
+.L318:
 	st.w	[a15],d1
 .L2:
 	mov	d0,#0
-.L128:
+.L138:
 	mov	d1,#0
-.L152:
+.L162:
 	j	.L6
 .L7:
 	mul	d15,d1,#4
-.L294:
+.L319:
 	mul	d2,d8,#20
-.L295:
+.L320:
 	movh.a	a15,#@his(distance_buffers)
 	lea	a15,[a15]@los(distance_buffers)
-.L296:
+.L321:
 	addsc.a	a15,a15,d2,#0
-.L297:
+.L322:
 	addsc.a	a15,a15,d15,#0
 	ld.w	d15,[a15]
-.L298:
+.L323:
 	add.f	d0,d0,d15
-.L299:
+.L324:
 	add	d1,#1
 .L6:
 	jlt	d1,#5,.L7
-.L129:
+.L139:
 	movh	d15,#16544
-.L300:
+.L325:
 	div.f	d2,d0,d15
-.L301:
+.L326:
 	j	.L8
 .L8:
 	ret
-.L121:
+.L131:
 	
 __ultrasonic_getDistanceFiltered_function_end:
 	.size	ultrasonic_getDistanceFiltered,__ultrasonic_getDistanceFiltered_function_end-ultrasonic_getDistanceFiltered
@@ -157,51 +157,51 @@ __ultrasonic_getDistanceFiltered_function_end:
 .L37:
 ultrasonicInit:	.type	func
 	mov	d8,#0
-.L153:
+.L163:
 	j	.L9
 .L10:
 	mul	d15,d8,#16
-.L183:
+.L200:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L184:
+.L201:
 	addsc.a	a15,a15,d15,#0
-.L185:
+.L202:
 	ld.a	a4,[a15]
-.L186:
+.L203:
 	mul	d15,d8,#16
-.L187:
+.L204:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L188:
+.L205:
 	addsc.a	a15,a15,d15,#0
-.L189:
+.L206:
 	ld.bu	d4,[a15]4
-.L190:
+.L207:
 	mov	d5,#128
 	call	IfxPort_setPinMode
-.L191:
+.L208:
 	mul	d15,d8,#16
-.L192:
+.L209:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L193:
+.L210:
 	addsc.a	a15,a15,d15,#0
-.L194:
+.L211:
 	ld.a	a4,[a15]8
-.L195:
+.L212:
 	mul	d15,d8,#16
-.L196:
+.L213:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L197:
+.L214:
 	addsc.a	a15,a15,d15,#0
-.L198:
+.L215:
 	ld.bu	d4,[a15]12
-.L199:
+.L216:
 	mov	d5,#16
 	call	IfxPort_setPinMode
-.L200:
+.L217:
 	add	d8,#1
 .L9:
 	jlt	d8,#3,.L10
@@ -222,61 +222,61 @@ __ultrasonicInit_function_end:
 .L39:
 sendTrigger:	.type	func
 	mov	d8,d4
-.L155:
+.L165:
 	mul	d15,d8,#16
-.L306:
+.L331:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L307:
+.L332:
 	addsc.a	a15,a15,d15,#0
-.L308:
+.L333:
 	ld.a	a2,[a15]
-.L309:
+.L334:
 	mul	d15,d8,#16
-.L310:
+.L335:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L311:
+.L336:
 	addsc.a	a15,a15,d15,#0
-.L312:
+.L337:
 	ld.bu	d15,[a15]4
-.L313:
+.L338:
 	mov	d0,#1
-.L134:
-	sha	d0,d0,d15
-.L314:
-	st.w	[a2]4,d0
-.L135:
-	mov	d4,#10
-.L154:
-	call	delayUs
-.L315:
-	mul	d15,d8,#16
-.L316:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
-.L317:
-	addsc.a	a15,a15,d15,#0
-.L318:
-	ld.a	a2,[a15]
-.L319:
-	mul	d15,d8,#16
-.L320:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
-.L321:
-	addsc.a	a15,a15,d15,#0
-.L322:
-	ld.bu	d15,[a15]4
-.L323:
-	movh	d0,#1
-.L143:
-	sha	d0,d0,d15
-.L324:
-	st.w	[a2]4,d0
 .L144:
+	sha	d0,d0,d15
+.L339:
+	st.w	[a2]4,d0
+.L145:
+	mov	d4,#10
+.L164:
+	call	delayUs
+.L340:
+	mul	d15,d8,#16
+.L341:
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
+.L342:
+	addsc.a	a15,a15,d15,#0
+.L343:
+	ld.a	a2,[a15]
+.L344:
+	mul	d15,d8,#16
+.L345:
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
+.L346:
+	addsc.a	a15,a15,d15,#0
+.L347:
+	ld.bu	d15,[a15]4
+.L348:
+	movh	d0,#1
+.L153:
+	sha	d0,d0,d15
+.L349:
+	st.w	[a2]4,d0
+.L154:
 	ret
-.L131:
+.L141:
 	
 __sendTrigger_function_end:
 	.size	sendTrigger,__sendTrigger_function_end-sendTrigger
@@ -292,41 +292,41 @@ __sendTrigger_function_end:
 .L41:
 ultrasonic_getDistanceCm:	.type	func
 	call	getDistanceByUltra
-.L156:
+.L166:
 	jge	d2,#0,.L11
-.L242:
+.L259:
 	movh	d2,#49024
-.L157:
+.L167:
 	j	.L12
 .L11:
 	itof	d15,d2
-.L243:
+.L260:
 	movh	d0,#17096
-.L244:
+.L261:
 	div.f	d15,d15,d0
-.L159:
+.L169:
 	mov	d0,#32296
 	addih	d0,d0,#15628
-.L245:
+.L262:
 	mul.f	d15,d15,d0
-.L160:
+.L170:
 	movh	d0,#16384
-.L246:
+.L263:
 	div.f	d2,d15,d0
-.L158:
+.L168:
 	movh	d15,#16384
-.L247:
+.L264:
 	cmp.f	d15,d2,d15
 	jnz.t	d15:0,.L13
-.L248:
+.L265:
 	movh	d15,#17352
-.L249:
+.L266:
 	cmp.f	d15,d2,d15
 	extr.u	d15,d15,#2,#1
 	jeq	d15,#0,.L14
 .L13:
 	movh	d2,#49152
-.L161:
+.L171:
 	j	.L15
 .L14:
 	j	.L16
@@ -350,59 +350,59 @@ __ultrasonic_getDistanceCm_function_end:
 .L43:
 getDistanceByUltra:	.type	func
 	mov	d8,d4
-.L163:
+.L173:
 	mov	d4,d8
 	call	sendTrigger
-.L162:
+.L172:
 	call	getTime10Ns
-.L205:
+.L222:
 	mov.u	d0,#38528
 	addih	d0,d0,#152
 	mov	d1,#0
-.L206:
+.L223:
 	addx	d10,d2,d0
 	addc	d11,d3,d1
-.L164:
+.L174:
 	j	.L17
 .L18:
 	call	getTime10Ns
-.L207:
+.L224:
 	ge.u	d15,d10,d2
 	and.eq	d15,d3,d11
 	or.lt.u	d15,d3,d11
-.L208:
+.L225:
 	jne	d15,#0,.L19
-.L209:
+.L226:
 	mov	d2,#-1
-.L210:
+.L227:
 	j	.L20
 .L19:
 .L17:
 	mul	d15,d8,#16
-.L211:
+.L228:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L212:
+.L229:
 	addsc.a	a15,a15,d15,#0
-.L213:
+.L230:
 	ld.a	a2,[a15]8
-.L214:
+.L231:
 	mul	d15,d8,#16
-.L215:
+.L232:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L216:
+.L233:
 	addsc.a	a15,a15,d15,#0
-.L217:
+.L234:
 	ld.bu	d15,[a15]12
 .L99:
 	ld.w	d0,[a2]36
 	extr.u	d15,d0,d15,#1
-.L218:
+.L235:
 	jeq	d15,#0,.L21
-.L219:
+.L236:
 	mov	d15,#1
-.L220:
+.L237:
 	j	.L22
 .L21:
 	mov	d15,#0
@@ -413,54 +413,54 @@ getDistanceByUltra:	.type	func
 .L100:
 	call	getTime10Ns
 	mov	e10,d3,d2
-.L165:
+.L175:
 	mov.u	d0,#38528
 	addih	d0,d0,#152
 	mov	d1,#0
-.L221:
+.L238:
 	addx	d12,d10,d0
 	addc	d13,d11,d1
-.L166:
+.L176:
 	j	.L24
 .L25:
 	call	getTime10Ns
-.L222:
+.L239:
 	ge.u	d15,d12,d2
 	and.eq	d15,d3,d13
 	or.lt.u	d15,d3,d13
-.L223:
+.L240:
 	jne	d15,#0,.L26
-.L224:
+.L241:
 	mov	d2,#-1
-.L225:
+.L242:
 	j	.L27
 .L26:
 .L24:
 	mul	d15,d8,#16
-.L226:
+.L243:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L227:
+.L244:
 	addsc.a	a15,a15,d15,#0
-.L228:
+.L245:
 	ld.a	a2,[a15]8
-.L229:
+.L246:
 	mul	d15,d8,#16
-.L230:
+.L247:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L231:
+.L248:
 	addsc.a	a15,a15,d15,#0
-.L232:
+.L249:
 	ld.bu	d15,[a15]12
 .L106:
 	ld.w	d0,[a2]36
 	extr.u	d15,d0,d15,#1
-.L233:
+.L250:
 	jeq	d15,#0,.L28
-.L234:
+.L251:
 	mov	d15,#1
-.L235:
+.L252:
 	j	.L29
 .L28:
 	mov	d15,#0
@@ -470,13 +470,13 @@ getDistanceByUltra:	.type	func
 	jne	d15,#0,.L25
 .L107:
 	call	getTime10Ns
-.L236:
+.L253:
 	subx	d2,d2,d10
-.L167:
+.L177:
 	jge	d2,#0,.L31
-.L237:
+.L254:
 	mov	d2,#-1
-.L168:
+.L178:
 	j	.L32
 .L31:
 	j	.L33
@@ -502,28 +502,77 @@ __getDistanceByUltra_function_end:
 diagnoseUltrasonicSensor:	.type	func
 	mov	d4,#0
 	call	ultrasonic_getDistanceCm
-.L169:
-	mov	d15,d2
-.L170:
-	movh	d0,#49024
-.L254:
-	cmp.f	d0,d15,d0
-	extr.u	d5,d0,#1,#1
-.L172:
-	movh	d4,#194
-.L255:
-	call	dtc_updateStatus
-.L119:
-	movh	d0,#49152
-.L256:
-	cmp.f	d15,d15,d0
-.L171:
+.L179:
+	mov	d8,d2
+.L181:
+	mov	d4,#1
+	call	ultrasonic_getDistanceCm
+.L180:
+	mov	d9,d2
+.L183:
+	mov	d4,#2
+	call	ultrasonic_getDistanceCm
+.L182:
+	mov	d10,d2
+.L184:
+	movh	d15,#49024
+.L271:
+	cmp.f	d15,d8,d15
 	extr.u	d5,d15,#1,#1
-.L173:
-	movh	d4,#130
-.L257:
+.L185:
+	movh	d4,#194
+.L272:
 	call	dtc_updateStatus
-.L174:
+.L121:
+	movh	d15,#49024
+.L273:
+	cmp.f	d15,d9,d15
+	extr.u	d5,d15,#1,#1
+.L186:
+	mov	d4,#1
+	addih	d4,d4,#194
+.L274:
+	call	dtc_updateStatus
+.L123:
+	movh	d15,#49024
+.L275:
+	cmp.f	d15,d10,d15
+	extr.u	d5,d15,#1,#1
+.L187:
+	mov	d4,#2
+	addih	d4,d4,#194
+.L276:
+	call	dtc_updateStatus
+.L125:
+	movh	d15,#49152
+.L277:
+	cmp.f	d15,d8,d15
+	extr.u	d5,d15,#1,#1
+.L188:
+	movh	d4,#130
+.L278:
+	call	dtc_updateStatus
+.L127:
+	movh	d15,#49152
+.L279:
+	cmp.f	d15,d9,d15
+	extr.u	d5,d15,#1,#1
+.L189:
+	mov	d4,#1
+	addih	d4,d4,#130
+.L280:
+	call	dtc_updateStatus
+.L129:
+	movh	d15,#49152
+.L281:
+	cmp.f	d15,d10,d15
+	extr.u	d5,d15,#1,#1
+.L190:
+	mov	d4,#2
+	addih	d4,d4,#130
+.L282:
+	call	dtc_updateStatus
+.L191:
 	ret
 .L115:
 	
@@ -2135,22 +2184,22 @@ ULT_PINS:	.type	object
 	.byte	'IfxPort_State_high',0,1,18
 	.byte	'IfxPort_State_low',0,128,128,4,18
 	.byte	'IfxPort_State_toggled',0,129,128,4,0
-.L133:
+.L143:
 	.byte	4
 	.byte	'IfxPort_setPinState',0,3,5,174,5,17,1,1
-.L136:
+.L146:
 	.byte	5
 	.byte	'port',0,5,174,5,44
 	.word	9173
-.L138:
+.L148:
 	.byte	5
 	.byte	'pinIndex',0,5,174,5,56
 	.word	662
-.L140:
+.L150:
 	.byte	5
 	.byte	'action',0,5,174,5,80
 	.word	9244
-.L142:
+.L152:
 	.byte	6,0,17,8,155,1,9,1,18
 	.byte	'IfxCpu_ResourceCpu_0',0,0,18
 	.byte	'IfxCpu_ResourceCpu_1',0,1,18
@@ -3117,23 +3166,23 @@ ULT_PINS:	.type	object
 	.byte	'getTime10Ns',0,14,9,8
 	.word	369
 	.byte	1,1,1,1
+.L119:
+	.byte	7
+	.byte	'_Bool',0,1,2,24
+	.byte	'dtc_updateStatus',0,15,44,6,1,1,1,1,5
+	.byte	'dtc_code',0,15,44,30
+	.word	9696
+	.byte	5
+	.byte	'is_faulty',0,15,44,45
+	.word	15604
+	.byte	0
 .L93:
 	.byte	29
-	.byte	'ultradir',0,15,23,14,1,18
+	.byte	'ultradir',0,16,25,14,1,18
 	.byte	'ULT_LEFT',0,0,18
 	.byte	'ULT_RIGHT',0,1,18
 	.byte	'ULT_REAR',0,2,18
-	.byte	'ULT_SENSORS_NUM',0,3,0
-.L117:
-	.byte	7
-	.byte	'_Bool',0,1,2,24
-	.byte	'dtc_updateStatus',0,16,36,6,1,1,1,1,5
-	.byte	'dtc_code',0,16,36,30
-	.word	9696
-	.byte	5
-	.byte	'is_faulty',0,16,36,45
-	.word	15671
-	.byte	0,7
+	.byte	'ULT_SENSORS_NUM',0,3,0,7
 	.byte	'short int',0,2,5,30
 	.byte	'__wchar_t',0,17,1,1
 	.word	15741
@@ -21941,36 +21990,36 @@ ULT_PINS:	.type	object
 	.byte	'IfxStm_SuspendMode_soft',0,2,0,30
 	.byte	'IfxStm_SuspendMode',0,12,137,2,3
 	.word	144507
-	.byte	32,15,16,9,16,13
+	.byte	32,16,18,9,16,13
 	.byte	'trigger',0
 	.word	46839
 	.byte	8,2,35,0,13
 	.byte	'echo',0
 	.word	46839
 	.byte	8,2,35,8,0,30
-	.byte	'UltPin',0,15,20,3
+	.byte	'UltPin',0,16,22,3
 	.word	144620
 	.byte	30
-	.byte	'UltraDir',0,15,26,3
-	.word	15604
+	.byte	'UltraDir',0,16,28,3
+	.word	15674
 	.byte	15,20
 	.word	283
 	.byte	16,4,0
-.L145:
+.L155:
 	.byte	15,60
 	.word	144689
 	.byte	16,2,0
-.L146:
+.L156:
 	.byte	15,12
 	.word	503
 	.byte	16,2,0
-.L147:
+.L157:
 	.byte	15,3
-	.word	15671
+	.word	15604
 	.byte	16,2,0,15,48
 	.word	144620
 	.byte	16,2,0
-.L148:
+.L158:
 	.byte	33
 	.word	144725
 	.byte	0
@@ -21990,11 +22039,11 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
 .L49:
-	.word	.L176-.L175
-.L175:
+	.word	.L193-.L192
+.L192:
 	.half	3
-	.word	.L178-.L177
-.L177:
+	.word	.L195-.L194
+.L194:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
@@ -22022,8 +22071,8 @@ ULT_PINS:	.type	object
 	.byte	'IfxStm.h',0,3,0,0
 	.byte	'IfxStm_regdef.h',0,1,0,0
 	.byte	'..\\BSW\\Service\\util.h',0,0,0,0
-	.byte	'..\\BSW\\Service\\ultrasonic.h',0,0,0,0
 	.byte	'..\\BSW\\Service\\dtc.h',0,0,0,0
+	.byte	'..\\BSW\\Service\\ultrasonic.h',0,0,0,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
 	.byte	0,0,0
@@ -22039,8 +22088,8 @@ ULT_PINS:	.type	object
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_Impl\\IfxSrc_cfg.h',0
 	.byte	0,0,0
 	.byte	'IfxCbs_regdef.h',0,1,0,0,0
-.L178:
-.L176:
+.L195:
+.L193:
 	.sdecl	'.debug_info',debug,cluster('ultrasonicInit')
 	.sect	'.debug_info'
 .L50:
@@ -22056,14 +22105,14 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'ultrasonicInit',0,1,62,6,1,1,1
+	.byte	'ultrasonicInit',0,1,60,6,1,1,1
 	.word	.L37,.L88,.L36
 	.byte	4
 	.word	.L37,.L88
 	.byte	4
 	.word	.L37,.L89
 	.byte	5
-	.byte	'i',0,1,64,14
+	.byte	'i',0,1,62,14
 	.word	.L90,.L91
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('ultrasonicInit')
@@ -22074,64 +22123,64 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('ultrasonicInit')
 	.sect	'.debug_line'
 .L52:
-	.word	.L180-.L179
-.L179:
+	.word	.L197-.L196
+.L196:
 	.half	3
-	.word	.L182-.L181
-.L181:
+	.word	.L199-.L198
+.L198:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0,0
-.L182:
+.L199:
 	.byte	5,16,7,0,5,2
 	.word	.L37
-	.byte	3,63,1,5,40,9
-	.half	.L153-.L37
+	.byte	3,61,1,5,40,9
+	.half	.L163-.L37
 	.byte	1,5,36,9
-	.half	.L10-.L153
+	.half	.L10-.L163
 	.byte	3,2,1,5,28,9
-	.half	.L183-.L10
+	.half	.L200-.L10
 	.byte	1,5,36,9
-	.half	.L184-.L183
+	.half	.L201-.L200
 	.byte	1,5,47,9
-	.half	.L185-.L184
+	.half	.L202-.L201
 	.byte	1,5,62,9
-	.half	.L186-.L185
+	.half	.L203-.L202
 	.byte	1,5,54,9
-	.half	.L187-.L186
+	.half	.L204-.L203
 	.byte	1,5,62,9
-	.half	.L188-.L187
+	.half	.L205-.L204
 	.byte	1,5,73,9
-	.half	.L189-.L188
+	.half	.L206-.L205
 	.byte	1,5,84,9
-	.half	.L190-.L189
+	.half	.L207-.L206
 	.byte	1,5,36,9
-	.half	.L191-.L190
+	.half	.L208-.L207
 	.byte	3,1,1,5,28,9
-	.half	.L192-.L191
+	.half	.L209-.L208
 	.byte	1,5,36,9
-	.half	.L193-.L192
+	.half	.L210-.L209
 	.byte	1,5,44,9
-	.half	.L194-.L193
+	.half	.L211-.L210
 	.byte	1,5,59,9
-	.half	.L195-.L194
+	.half	.L212-.L211
 	.byte	1,5,51,9
-	.half	.L196-.L195
+	.half	.L213-.L212
 	.byte	1,5,59,9
-	.half	.L197-.L196
+	.half	.L214-.L213
 	.byte	1,5,67,9
-	.half	.L198-.L197
+	.half	.L215-.L214
 	.byte	1,5,78,9
-	.half	.L199-.L198
+	.half	.L216-.L215
 	.byte	1,5,43,9
-	.half	.L200-.L199
+	.half	.L217-.L216
 	.byte	3,125,1,5,40,9
-	.half	.L9-.L200
+	.half	.L9-.L217
 	.byte	1,5,1,7,9
 	.half	.L89-.L9
 	.byte	3,5,1,7,9
 	.half	.L54-.L89
 	.byte	0,1,1
-.L180:
+.L197:
 	.sdecl	'.debug_ranges',debug,cluster('ultrasonicInit')
 	.sect	'.debug_ranges'
 .L53:
@@ -22151,20 +22200,20 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'getDistanceByUltra',0,1,112,5
+	.byte	'getDistanceByUltra',0,1,110,5
 	.word	.L90
 	.byte	1,1,1
 	.word	.L43,.L92,.L42
 	.byte	4
-	.byte	'dir',0,1,112,33
+	.byte	'dir',0,1,110,33
 	.word	.L93,.L94
 	.byte	5
 	.word	.L43,.L92
 	.byte	6
-	.byte	'start',0,1,114,12
+	.byte	'start',0,1,112,12
 	.word	.L95,.L96
 	.byte	6
-	.byte	'timeOut',0,1,114,19
+	.byte	'timeOut',0,1,112,19
 	.word	.L95,.L97
 	.byte	7
 	.word	.L98,.L99,.L100
@@ -22185,7 +22234,7 @@ ULT_PINS:	.type	object
 	.byte	0,5
 	.word	.L107,.L92
 	.byte	6
-	.byte	'res',0,1,130,1,9
+	.byte	'res',0,1,128,1,9
 	.word	.L90,.L108
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('getDistanceByUltra')
@@ -22198,135 +22247,135 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_line'
 .L57:
-	.word	.L202-.L201
-.L201:
+	.word	.L219-.L218
+.L218:
 	.half	3
-	.word	.L204-.L203
-.L203:
+	.word	.L221-.L220
+.L220:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L204:
+.L221:
 	.byte	5,5,7,0,5,2
 	.word	.L43
-	.byte	3,239,0,1,5,17,9
-	.half	.L163-.L43
+	.byte	3,237,0,1,5,17,9
+	.half	.L173-.L43
 	.byte	3,3,1,5,26,9
-	.half	.L162-.L163
+	.half	.L172-.L173
 	.byte	3,2,1,5,16,9
-	.half	.L205-.L162
+	.half	.L222-.L172
 	.byte	3,1,1,5,13,9
-	.half	.L206-.L205
+	.half	.L223-.L222
 	.byte	1,5,85,9
-	.half	.L164-.L206
+	.half	.L174-.L223
 	.byte	3,2,1,5,23,9
-	.half	.L18-.L164
+	.half	.L18-.L174
 	.byte	3,1,1,5,26,9
-	.half	.L207-.L18
+	.half	.L224-.L18
 	.byte	1,5,9,9
-	.half	.L208-.L207
+	.half	.L225-.L224
 	.byte	1,5,44,7,9
-	.half	.L209-.L208
+	.half	.L226-.L225
 	.byte	1,5,37,9
-	.half	.L210-.L209
+	.half	.L227-.L226
 	.byte	1,5,40,9
-	.half	.L17-.L210
+	.half	.L17-.L227
 	.byte	3,127,1,5,32,9
-	.half	.L211-.L17
+	.half	.L228-.L17
 	.byte	1,5,40,9
-	.half	.L212-.L211
+	.half	.L229-.L228
 	.byte	1,5,50,9
-	.half	.L213-.L212
+	.half	.L230-.L229
 	.byte	1,5,65,9
-	.half	.L214-.L213
+	.half	.L231-.L230
 	.byte	1,5,57,9
-	.half	.L215-.L214
+	.half	.L232-.L231
 	.byte	1,5,65,9
-	.half	.L216-.L215
+	.half	.L233-.L232
 	.byte	1,5,75,9
-	.half	.L217-.L216
+	.half	.L234-.L233
 	.byte	1,4,2,5,13,9
-	.half	.L99-.L217
-	.byte	3,138,4,1,5,12,9
-	.half	.L218-.L99
+	.half	.L99-.L234
+	.byte	3,140,4,1,5,12,9
+	.half	.L235-.L99
 	.byte	1,5,51,7,9
-	.half	.L219-.L218
+	.half	.L236-.L235
 	.byte	1,5,58,9
-	.half	.L220-.L219
+	.half	.L237-.L236
 	.byte	1,5,51,9
-	.half	.L21-.L220
+	.half	.L21-.L237
 	.byte	1,5,5,9
 	.half	.L22-.L21
 	.byte	1,4,1,5,12,9
 	.half	.L23-.L22
-	.byte	3,246,123,1,5,24,7,9
+	.byte	3,244,123,1,5,24,7,9
 	.half	.L100-.L23
 	.byte	3,3,1,5,23,9
-	.half	.L165-.L100
+	.half	.L175-.L100
 	.byte	3,1,1,5,21,9
-	.half	.L221-.L165
+	.half	.L238-.L175
 	.byte	1,5,84,9
-	.half	.L166-.L221
+	.half	.L176-.L238
 	.byte	3,2,1,5,23,9
-	.half	.L25-.L166
+	.half	.L25-.L176
 	.byte	3,1,1,5,26,9
-	.half	.L222-.L25
+	.half	.L239-.L25
 	.byte	1,5,9,9
-	.half	.L223-.L222
+	.half	.L240-.L239
 	.byte	1,5,44,7,9
-	.half	.L224-.L223
+	.half	.L241-.L240
 	.byte	1,5,37,9
-	.half	.L225-.L224
+	.half	.L242-.L241
 	.byte	1,5,39,9
-	.half	.L24-.L225
+	.half	.L24-.L242
 	.byte	3,127,1,5,31,9
-	.half	.L226-.L24
+	.half	.L243-.L24
 	.byte	1,5,39,9
-	.half	.L227-.L226
+	.half	.L244-.L243
 	.byte	1,5,49,9
-	.half	.L228-.L227
+	.half	.L245-.L244
 	.byte	1,5,64,9
-	.half	.L229-.L228
+	.half	.L246-.L245
 	.byte	1,5,56,9
-	.half	.L230-.L229
+	.half	.L247-.L246
 	.byte	1,5,64,9
-	.half	.L231-.L230
+	.half	.L248-.L247
 	.byte	1,5,74,9
-	.half	.L232-.L231
+	.half	.L249-.L248
 	.byte	1,4,2,5,13,9
-	.half	.L106-.L232
-	.byte	3,132,4,1,5,12,9
-	.half	.L233-.L106
+	.half	.L106-.L249
+	.byte	3,134,4,1,5,12,9
+	.half	.L250-.L106
 	.byte	1,5,51,7,9
-	.half	.L234-.L233
+	.half	.L251-.L250
 	.byte	1,5,58,9
-	.half	.L235-.L234
+	.half	.L252-.L251
 	.byte	1,5,51,9
-	.half	.L28-.L235
+	.half	.L28-.L252
 	.byte	1,5,5,9
 	.half	.L29-.L28
 	.byte	1,4,1,5,84,9
 	.half	.L30-.L29
-	.byte	3,252,123,1,5,33,7,9
+	.byte	3,250,123,1,5,33,7,9
 	.half	.L107-.L30
 	.byte	3,4,1,5,36,9
-	.half	.L236-.L107
+	.half	.L253-.L107
 	.byte	1,5,5,9
-	.half	.L167-.L236
+	.half	.L177-.L253
 	.byte	3,1,1,5,24,7,9
-	.half	.L237-.L167
+	.half	.L254-.L177
 	.byte	1,5,17,9
-	.half	.L168-.L237
+	.half	.L178-.L254
 	.byte	1,5,5,9
-	.half	.L31-.L168
+	.half	.L31-.L178
 	.byte	3,1,1,5,1,9
 	.half	.L20-.L31
 	.byte	3,1,1,7,9
 	.half	.L59-.L20
 	.byte	0,1,1
-.L202:
+.L219:
 	.sdecl	'.debug_ranges',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_ranges'
 .L58:
@@ -22346,25 +22395,25 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'ultrasonic_getDistanceCm',0,1,84,7
+	.byte	'ultrasonic_getDistanceCm',0,1,82,7
 	.word	.L109
 	.byte	1,1,1
 	.word	.L41,.L110,.L40
 	.byte	4
-	.byte	'dir',0,1,84,41
+	.byte	'dir',0,1,82,41
 	.word	.L93,.L111
 	.byte	5
 	.word	.L41,.L110
 	.byte	6
-	.byte	'duration_10ns',0,1,87,9
+	.byte	'duration_10ns',0,1,85,9
 	.word	.L90,.L112
 	.byte	5
 	.word	.L11,.L110
 	.byte	6
-	.byte	'duration_us',0,1,96,11
+	.byte	'duration_us',0,1,94,11
 	.word	.L109,.L113
 	.byte	6
-	.byte	'distance_cm',0,1,99,11
+	.byte	'distance_cm',0,1,97,11
 	.word	.L109,.L114
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('ultrasonic_getDistanceCm')
@@ -22376,56 +22425,56 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('ultrasonic_getDistanceCm')
 	.sect	'.debug_line'
 .L62:
-	.word	.L239-.L238
-.L238:
+	.word	.L256-.L255
+.L255:
 	.half	3
-	.word	.L241-.L240
-.L240:
+	.word	.L258-.L257
+.L257:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0,0
-.L241:
+.L258:
 	.byte	5,44,7,0,5,2
 	.word	.L41
-	.byte	3,214,0,1,5,5,9
-	.half	.L156-.L41
+	.byte	3,212,0,1,5,5,9
+	.half	.L166-.L41
 	.byte	3,3,1,5,16,7,9
-	.half	.L242-.L156
+	.half	.L259-.L166
 	.byte	3,2,1,5,9,9
-	.half	.L157-.L242
+	.half	.L167-.L259
 	.byte	1,5,25,9
-	.half	.L11-.L157
+	.half	.L11-.L167
 	.byte	3,4,1,5,48,9
-	.half	.L243-.L11
+	.half	.L260-.L11
 	.byte	1,5,46,9
-	.half	.L244-.L243
+	.half	.L261-.L260
 	.byte	1,5,40,9
-	.half	.L159-.L244
+	.half	.L169-.L261
 	.byte	3,3,1,5,38,9
-	.half	.L245-.L159
+	.half	.L262-.L169
 	.byte	1,5,51,9
-	.half	.L160-.L245
+	.half	.L170-.L262
 	.byte	1,5,49,9
-	.half	.L246-.L160
+	.half	.L263-.L170
 	.byte	1,5,23,9
-	.half	.L158-.L246
+	.half	.L168-.L263
 	.byte	3,4,1,5,9,9
-	.half	.L247-.L158
+	.half	.L264-.L168
 	.byte	1,5,45,9
-	.half	.L248-.L247
+	.half	.L265-.L264
 	.byte	1,5,43,9
-	.half	.L249-.L248
+	.half	.L266-.L265
 	.byte	1,5,16,9
-	.half	.L13-.L249
+	.half	.L13-.L266
 	.byte	3,1,1,5,9,9
-	.half	.L161-.L13
+	.half	.L171-.L13
 	.byte	1,5,5,9
-	.half	.L14-.L161
+	.half	.L14-.L171
 	.byte	3,4,1,5,1,9
 	.half	.L12-.L14
 	.byte	3,1,1,7,9
 	.half	.L64-.L12
 	.byte	0,1,1
-.L239:
+.L256:
 	.sdecl	'.debug_ranges',debug,cluster('ultrasonic_getDistanceCm')
 	.sect	'.debug_ranges'
 .L63:
@@ -22433,7 +22482,7 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_info',debug,cluster('diagnoseUltrasonicSensor')
 	.sect	'.debug_info'
 .L65:
-	.word	385
+	.word	608
 	.half	3
 	.word	.L66
 	.byte	4,1
@@ -22445,22 +22494,48 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'diagnoseUltrasonicSensor',0,1,135,1,6,1,1,1
+	.byte	'diagnoseUltrasonicSensor',0,1,133,1,6,1,1,1
 	.word	.L45,.L115,.L44
 	.byte	4
 	.word	.L45,.L115
 	.byte	5
-	.byte	'distance_left',0,1,138,1,11
+	.byte	'distance_left',0,1,136,1,11
 	.word	.L109,.L116
 	.byte	5
-	.byte	'isSignalFault_left',0,1,142,1,10
-	.word	.L117,.L118
-	.byte	4
-	.word	.L119,.L115
+	.byte	'distance_right',0,1,137,1,11
+	.word	.L109,.L117
 	.byte	5
-	.byte	'isRangeFault_left',0,1,147,1,10
-	.word	.L117,.L120
-	.byte	0,0,0,0
+	.byte	'distance_rear',0,1,138,1,11
+	.word	.L109,.L118
+	.byte	5
+	.byte	'isSignalFault_left',0,1,143,1,10
+	.word	.L119,.L120
+	.byte	4
+	.word	.L121,.L115
+	.byte	5
+	.byte	'isSignalFault_right',0,1,146,1,10
+	.word	.L119,.L122
+	.byte	4
+	.word	.L123,.L115
+	.byte	5
+	.byte	'isSignalFault_rear',0,1,149,1,10
+	.word	.L119,.L124
+	.byte	4
+	.word	.L125,.L115
+	.byte	5
+	.byte	'isRangeFault_left',0,1,155,1,10
+	.word	.L119,.L126
+	.byte	4
+	.word	.L127,.L115
+	.byte	5
+	.byte	'isRangeFault_right',0,1,158,1,10
+	.word	.L119,.L128
+	.byte	4
+	.word	.L129,.L115
+	.byte	5
+	.byte	'isRangeFault_rear',0,1,161,1,10
+	.word	.L119,.L130
+	.byte	0,0,0,0,0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('diagnoseUltrasonicSensor')
 	.sect	'.debug_abbrev'
 .L66:
@@ -22469,40 +22544,80 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('diagnoseUltrasonicSensor')
 	.sect	'.debug_line'
 .L67:
-	.word	.L251-.L250
-.L250:
+	.word	.L268-.L267
+.L267:
 	.half	3
-	.word	.L253-.L252
-.L252:
+	.word	.L270-.L269
+.L269:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0,0
-.L253:
+.L270:
 	.byte	5,52,7,0,5,2
 	.word	.L45
-	.byte	3,137,1,1,5,25,9
-	.half	.L169-.L45
+	.byte	3,135,1,1,5,25,9
+	.half	.L179-.L45
+	.byte	1,5,53,9
+	.half	.L181-.L179
+	.byte	3,1,1,5,26,9
+	.half	.L180-.L181
+	.byte	1,5,52,9
+	.half	.L183-.L180
+	.byte	3,1,1,5,25,9
+	.half	.L182-.L183
 	.byte	1,5,49,9
-	.half	.L170-.L169
-	.byte	3,4,1,5,46,9
-	.half	.L254-.L170
+	.half	.L184-.L182
+	.byte	3,5,1,5,46,9
+	.half	.L271-.L184
 	.byte	1,5,22,9
-	.half	.L172-.L254
-	.byte	3,1,1,5,51,9
-	.half	.L255-.L172
+	.half	.L185-.L271
+	.byte	3,1,1,5,44,9
+	.half	.L272-.L185
+	.byte	1,5,51,9
+	.half	.L121-.L272
+	.byte	3,2,1,5,48,9
+	.half	.L273-.L121
+	.byte	1,5,22,9
+	.half	.L186-.L273
+	.byte	3,1,1,5,45,9
+	.half	.L274-.L186
+	.byte	1,5,49,9
+	.half	.L123-.L274
+	.byte	3,2,1,5,46,9
+	.half	.L275-.L123
+	.byte	1,5,22,9
+	.half	.L187-.L275
+	.byte	3,1,1,5,44,9
+	.half	.L276-.L187
 	.byte	1,5,48,9
-	.half	.L119-.L255
-	.byte	3,4,1,5,45,9
-	.half	.L256-.L119
+	.half	.L125-.L276
+	.byte	3,5,1,5,45,9
+	.half	.L277-.L125
 	.byte	1,5,22,9
-	.half	.L173-.L256
-	.byte	3,1,1,5,54,9
-	.half	.L257-.L173
+	.half	.L188-.L277
+	.byte	3,1,1,5,47,9
+	.half	.L278-.L188
+	.byte	1,5,50,9
+	.half	.L127-.L278
+	.byte	3,2,1,5,47,9
+	.half	.L279-.L127
+	.byte	1,5,22,9
+	.half	.L189-.L279
+	.byte	3,1,1,5,48,9
+	.half	.L280-.L189
+	.byte	1,9
+	.half	.L129-.L280
+	.byte	3,2,1,5,45,9
+	.half	.L281-.L129
+	.byte	1,5,22,9
+	.half	.L190-.L281
+	.byte	3,1,1,5,47,9
+	.half	.L282-.L190
 	.byte	1,5,1,9
-	.half	.L174-.L257
+	.half	.L191-.L282
 	.byte	3,1,1,7,9
-	.half	.L69-.L174
+	.half	.L69-.L191
 	.byte	0,1,1
-.L251:
+.L268:
 	.sdecl	'.debug_ranges',debug,cluster('diagnoseUltrasonicSensor')
 	.sect	'.debug_ranges'
 .L68:
@@ -22522,33 +22637,33 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'ultrasonic_getDistanceFiltered',0,1,17,7
+	.byte	'ultrasonic_getDistanceFiltered',0,1,16,7
 	.word	.L109
 	.byte	1,1,1
-	.word	.L35,.L121,.L34
+	.word	.L35,.L131,.L34
 	.byte	4
-	.byte	'dir',0,1,17,47
-	.word	.L93,.L122
+	.byte	'dir',0,1,16,47
+	.word	.L93,.L132
 	.byte	5
-	.word	.L35,.L121
+	.word	.L35,.L131
 	.byte	6
-	.byte	'new_distance',0,1,20,11
-	.word	.L109,.L123
+	.byte	'new_distance',0,1,19,11
+	.word	.L109,.L133
 	.byte	5
-	.word	.L124,.L125
+	.word	.L134,.L135
 	.byte	6
-	.byte	'i',0,1,30,22
-	.word	.L90,.L126
+	.byte	'i',0,1,29,22
+	.word	.L90,.L136
 	.byte	0,5
-	.word	.L2,.L121
+	.word	.L2,.L131
 	.byte	6
-	.byte	'sum',0,1,43,11
-	.word	.L109,.L127
+	.byte	'sum',0,1,41,11
+	.word	.L109,.L137
 	.byte	5
-	.word	.L128,.L129
+	.word	.L138,.L139
 	.byte	6
-	.byte	'i',0,1,44,14
-	.word	.L90,.L130
+	.byte	'i',0,1,42,14
+	.word	.L90,.L140
 	.byte	0,0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('ultrasonic_getDistanceFiltered')
 	.sect	'.debug_abbrev'
@@ -22559,130 +22674,130 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('ultrasonic_getDistanceFiltered')
 	.sect	'.debug_line'
 .L72:
-	.word	.L259-.L258
-.L258:
+	.word	.L284-.L283
+.L283:
 	.half	3
-	.word	.L261-.L260
-.L260:
+	.word	.L286-.L285
+.L285:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0,0
-.L261:
+.L286:
 	.byte	5,7,7,0,5,2
 	.word	.L35
-	.byte	3,16,1,5,51,9
-	.half	.L150-.L35
+	.byte	3,15,1,5,51,9
+	.half	.L160-.L35
 	.byte	3,3,1,5,25,9
-	.half	.L149-.L150
+	.half	.L159-.L160
 	.byte	3,3,1,5,22,9
-	.half	.L262-.L149
+	.half	.L287-.L159
 	.byte	1,5,5,9
-	.half	.L263-.L262
-	.byte	1,5,13,7,9
-	.half	.L264-.L263
-	.byte	3,5,1,5,29,9
-	.half	.L265-.L264
-	.byte	1,5,9,9
-	.half	.L266-.L265
-	.byte	1,5,24,7,9
-	.half	.L124-.L266
-	.byte	3,2,1,5,51,9
-	.half	.L151-.L124
-	.byte	1,5,38,9
-	.half	.L5-.L151
-	.byte	3,1,1,5,33,9
-	.half	.L267-.L5
-	.byte	1,5,17,9
-	.half	.L268-.L267
-	.byte	1,5,33,9
-	.half	.L269-.L268
-	.byte	1,5,38,9
-	.half	.L270-.L269
-	.byte	1,5,42,9
-	.half	.L271-.L270
-	.byte	1,5,54,9
-	.half	.L272-.L271
-	.byte	3,127,1,5,51,9
-	.half	.L4-.L272
-	.byte	1,5,13,7,9
-	.half	.L125-.L4
-	.byte	3,3,1,5,29,9
-	.half	.L273-.L125
-	.byte	1,5,37,9
-	.half	.L274-.L273
-	.byte	1,5,35,9
-	.half	.L275-.L274
-	.byte	1,5,45,9
-	.half	.L3-.L275
-	.byte	3,5,1,5,31,9
-	.half	.L276-.L3
-	.byte	1,5,45,9
-	.half	.L277-.L276
-	.byte	1,5,30,9
-	.half	.L278-.L277
-	.byte	1,5,25,9
-	.half	.L279-.L278
-	.byte	1,5,9,9
-	.half	.L280-.L279
-	.byte	1,5,25,9
-	.half	.L281-.L280
-	.byte	1,5,30,9
-	.half	.L282-.L281
-	.byte	1,5,52,9
-	.half	.L283-.L282
-	.byte	1,5,23,9
-	.half	.L284-.L283
-	.byte	3,1,1,5,9,9
-	.half	.L285-.L284
-	.byte	1,5,23,9
-	.half	.L286-.L285
-	.byte	1,5,46,9
-	.half	.L287-.L286
-	.byte	1,5,32,9
 	.half	.L288-.L287
-	.byte	1,5,46,9
+	.byte	1,5,13,7,9
 	.half	.L289-.L288
-	.byte	1,5,52,9
+	.byte	3,5,1,5,29,9
 	.half	.L290-.L289
-	.byte	1,5,59,9
+	.byte	1,5,9,9
 	.half	.L291-.L290
-	.byte	1,5,57,9
-	.half	.L292-.L291
-	.byte	1,5,29,9
+	.byte	1,5,24,7,9
+	.half	.L134-.L291
+	.byte	3,2,1,5,51,9
+	.half	.L161-.L134
+	.byte	1,5,38,9
+	.half	.L5-.L161
+	.byte	3,1,1,5,33,9
+	.half	.L292-.L5
+	.byte	1,5,17,9
 	.half	.L293-.L292
-	.byte	1,5,15,9
-	.half	.L2-.L293
-	.byte	3,4,1,5,16,9
-	.half	.L128-.L2
-	.byte	3,1,1,5,43,9
-	.half	.L152-.L128
-	.byte	1,5,37,9
-	.half	.L7-.L152
-	.byte	3,2,1,5,32,9
-	.half	.L294-.L7
-	.byte	1,5,16,9
+	.byte	1,5,33,9
+	.half	.L294-.L293
+	.byte	1,5,38,9
 	.half	.L295-.L294
-	.byte	1,5,32,9
+	.byte	1,5,42,9
 	.half	.L296-.L295
-	.byte	1,5,37,9
+	.byte	1,5,54,9
 	.half	.L297-.L296
-	.byte	1,5,13,9
-	.half	.L298-.L297
-	.byte	1,5,46,9
+	.byte	3,127,1,5,51,9
+	.half	.L4-.L297
+	.byte	1,5,13,7,9
+	.half	.L135-.L4
+	.byte	3,3,1,5,29,9
+	.half	.L298-.L135
+	.byte	1,5,37,9
 	.half	.L299-.L298
+	.byte	1,5,35,9
+	.half	.L300-.L299
+	.byte	1,5,45,9
+	.half	.L3-.L300
+	.byte	3,4,1,5,31,9
+	.half	.L301-.L3
+	.byte	1,5,45,9
+	.half	.L302-.L301
+	.byte	1,5,30,9
+	.half	.L303-.L302
+	.byte	1,5,25,9
+	.half	.L304-.L303
+	.byte	1,5,9,9
+	.half	.L305-.L304
+	.byte	1,5,25,9
+	.half	.L306-.L305
+	.byte	1,5,30,9
+	.half	.L307-.L306
+	.byte	1,5,52,9
+	.half	.L308-.L307
+	.byte	1,5,23,9
+	.half	.L309-.L308
+	.byte	3,1,1,5,9,9
+	.half	.L310-.L309
+	.byte	1,5,23,9
+	.half	.L311-.L310
+	.byte	1,5,46,9
+	.half	.L312-.L311
+	.byte	1,5,32,9
+	.half	.L313-.L312
+	.byte	1,5,46,9
+	.half	.L314-.L313
+	.byte	1,5,52,9
+	.half	.L315-.L314
+	.byte	1,5,59,9
+	.half	.L316-.L315
+	.byte	1,5,57,9
+	.half	.L317-.L316
+	.byte	1,5,29,9
+	.half	.L318-.L317
+	.byte	1,5,15,9
+	.half	.L2-.L318
+	.byte	3,4,1,5,16,9
+	.half	.L138-.L2
+	.byte	3,1,1,5,43,9
+	.half	.L162-.L138
+	.byte	1,5,37,9
+	.half	.L7-.L162
+	.byte	3,2,1,5,32,9
+	.half	.L319-.L7
+	.byte	1,5,16,9
+	.half	.L320-.L319
+	.byte	1,5,32,9
+	.half	.L321-.L320
+	.byte	1,5,37,9
+	.half	.L322-.L321
+	.byte	1,5,13,9
+	.half	.L323-.L322
+	.byte	1,5,46,9
+	.half	.L324-.L323
 	.byte	3,126,1,5,43,9
-	.half	.L6-.L299
+	.half	.L6-.L324
 	.byte	1,5,18,7,9
-	.half	.L129-.L6
+	.half	.L139-.L6
 	.byte	3,6,1,5,16,9
-	.half	.L300-.L129
+	.half	.L325-.L139
 	.byte	1,5,5,9
-	.half	.L301-.L300
+	.half	.L326-.L325
 	.byte	1,5,1,9
-	.half	.L8-.L301
+	.half	.L8-.L326
 	.byte	3,1,1,7,9
 	.half	.L74-.L8
 	.byte	0,1,1
-.L259:
+.L284:
 	.sdecl	'.debug_ranges',debug,cluster('ultrasonic_getDistanceFiltered')
 	.sect	'.debug_ranges'
 .L73:
@@ -22702,33 +22817,33 @@ ULT_PINS:	.type	object
 	.byte	2
 	.word	.L46
 	.byte	3
-	.byte	'sendTrigger',0,1,73,13,1,1
-	.word	.L39,.L131,.L38
+	.byte	'sendTrigger',0,1,71,13,1,1
+	.word	.L39,.L141,.L38
 	.byte	4
-	.byte	'dir',0,1,73,34
-	.word	.L93,.L132
+	.byte	'dir',0,1,71,34
+	.word	.L93,.L142
 	.byte	5
-	.word	.L39,.L131
+	.word	.L39,.L141
 	.byte	6
-	.word	.L133,.L134,.L135
+	.word	.L143,.L144,.L145
 	.byte	7
-	.word	.L136,.L137
+	.word	.L146,.L147
 	.byte	7
-	.word	.L138,.L139
+	.word	.L148,.L149
 	.byte	7
-	.word	.L140,.L141
+	.word	.L150,.L151
 	.byte	8
-	.word	.L142,.L134,.L135
+	.word	.L152,.L144,.L145
 	.byte	0,6
-	.word	.L133,.L143,.L144
+	.word	.L143,.L153,.L154
 	.byte	7
-	.word	.L136,.L137
+	.word	.L146,.L147
 	.byte	7
-	.word	.L138,.L139
+	.word	.L148,.L149
 	.byte	7
-	.word	.L140,.L141
+	.word	.L150,.L151
 	.byte	8
-	.word	.L142,.L143,.L144
+	.word	.L152,.L153,.L154
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('sendTrigger')
 	.sect	'.debug_abbrev'
@@ -22739,71 +22854,71 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('sendTrigger')
 	.sect	'.debug_line'
 .L77:
-	.word	.L303-.L302
-.L302:
+	.word	.L328-.L327
+.L327:
 	.half	3
-	.word	.L305-.L304
-.L304:
+	.word	.L330-.L329
+.L329:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L305:
+.L330:
 	.byte	5,13,7,0,5,2
 	.word	.L39
-	.byte	3,200,0,1,5,33,9
-	.half	.L155-.L39
+	.byte	3,198,0,1,5,33,9
+	.half	.L165-.L39
 	.byte	3,2,1,5,25,9
-	.half	.L306-.L155
+	.half	.L331-.L165
 	.byte	1,5,33,9
-	.half	.L307-.L306
+	.half	.L332-.L331
 	.byte	1,5,46,9
-	.half	.L308-.L307
+	.half	.L333-.L332
 	.byte	1,5,61,9
-	.half	.L309-.L308
+	.half	.L334-.L333
 	.byte	1,5,53,9
-	.half	.L310-.L309
+	.half	.L335-.L334
 	.byte	1,5,61,9
-	.half	.L311-.L310
+	.half	.L336-.L335
 	.byte	1,5,74,9
-	.half	.L312-.L311
+	.half	.L337-.L336
 	.byte	1,5,85,9
-	.half	.L313-.L312
+	.half	.L338-.L337
 	.byte	1,4,2,5,26,9
-	.half	.L134-.L313
-	.byte	3,229,4,1,5,17,9
-	.half	.L314-.L134
+	.half	.L144-.L338
+	.byte	3,231,4,1,5,17,9
+	.half	.L339-.L144
 	.byte	1,4,1,5,13,9
-	.half	.L135-.L314
-	.byte	3,156,123,1,5,33,9
-	.half	.L315-.L135
+	.half	.L145-.L339
+	.byte	3,154,123,1,5,33,9
+	.half	.L340-.L145
 	.byte	3,1,1,5,25,9
-	.half	.L316-.L315
+	.half	.L341-.L340
 	.byte	1,5,33,9
-	.half	.L317-.L316
+	.half	.L342-.L341
 	.byte	1,5,46,9
-	.half	.L318-.L317
+	.half	.L343-.L342
 	.byte	1,5,61,9
-	.half	.L319-.L318
+	.half	.L344-.L343
 	.byte	1,5,53,9
-	.half	.L320-.L319
+	.half	.L345-.L344
 	.byte	1,5,61,9
-	.half	.L321-.L320
+	.half	.L346-.L345
 	.byte	1,5,74,9
-	.half	.L322-.L321
+	.half	.L347-.L346
 	.byte	1,5,85,9
-	.half	.L323-.L322
+	.half	.L348-.L347
 	.byte	1,4,2,5,26,9
-	.half	.L143-.L323
-	.byte	3,227,4,1,5,17,9
-	.half	.L324-.L143
+	.half	.L153-.L348
+	.byte	3,229,4,1,5,17,9
+	.half	.L349-.L153
 	.byte	1,4,1,5,1,9
-	.half	.L144-.L324
-	.byte	3,159,123,1,7,9
-	.half	.L79-.L144
+	.half	.L154-.L349
+	.byte	3,157,123,1,7,9
+	.half	.L79-.L154
 	.byte	0,1,1
-.L303:
+.L328:
 	.sdecl	'.debug_ranges',debug,cluster('sendTrigger')
 	.sect	'.debug_ranges'
 .L78:
@@ -22821,8 +22936,8 @@ ULT_PINS:	.type	object
 	.byte	12,1,2
 	.word	.L46
 	.byte	3
-	.byte	'distance_buffers',0,17,8,14
-	.word	.L145
+	.byte	'distance_buffers',0,17,7,14
+	.word	.L155
 	.byte	5,3
 	.word	distance_buffers
 	.byte	0
@@ -22843,8 +22958,8 @@ ULT_PINS:	.type	object
 	.byte	12,1,2
 	.word	.L46
 	.byte	3
-	.byte	'buffer_indexes',0,17,9,12
-	.word	.L146
+	.byte	'buffer_indexes',0,17,8,12
+	.word	.L156
 	.byte	5,3
 	.word	buffer_indexes
 	.byte	0
@@ -22865,8 +22980,8 @@ ULT_PINS:	.type	object
 	.byte	12,1,2
 	.word	.L46
 	.byte	3
-	.byte	'is_filter_primed',0,17,14,13
-	.word	.L147
+	.byte	'is_filter_primed',0,17,13,13
+	.word	.L157
 	.byte	5,3
 	.word	is_filter_primed
 	.byte	0
@@ -22887,8 +23002,8 @@ ULT_PINS:	.type	object
 	.byte	12,1,2
 	.word	.L46
 	.byte	3
-	.byte	'ULT_PINS',0,17,53,14
-	.word	.L148
+	.byte	'ULT_PINS',0,17,51,14
+	.word	.L158
 	.byte	1,5,3
 	.word	ULT_PINS
 	.byte	0
@@ -22905,30 +23020,66 @@ ULT_PINS:	.type	object
 	.byte	138,0
 	.word	0,0
 .L116:
-	.word	-1,.L45,.L169-.L45,.L119-.L45
+	.word	-1,.L45,.L179-.L45,.L180-.L45
 	.half	1
 	.byte	82
-	.word	.L170-.L45,.L171-.L45
+	.word	.L181-.L45,.L115-.L45
 	.half	1
-	.byte	95
+	.byte	88
 	.word	0,0
-.L120:
-	.word	-1,.L45,.L173-.L45,.L174-.L45
+.L118:
+	.word	-1,.L45,.L182-.L45,.L121-.L45
+	.half	1
+	.byte	82
+	.word	.L184-.L45,.L115-.L45
+	.half	1
+	.byte	90
+	.word	0,0
+.L117:
+	.word	-1,.L45,.L180-.L45,.L182-.L45
+	.half	1
+	.byte	82
+	.word	.L183-.L45,.L115-.L45
+	.half	1
+	.byte	89
+	.word	0,0
+.L126:
+	.word	-1,.L45,.L188-.L45,.L127-.L45
 	.half	1
 	.byte	85
 	.word	0,0
-.L118:
-	.word	-1,.L45,.L172-.L45,.L119-.L45
+.L130:
+	.word	-1,.L45,.L190-.L45,.L191-.L45
+	.half	1
+	.byte	85
+	.word	0,0
+.L128:
+	.word	-1,.L45,.L189-.L45,.L129-.L45
+	.half	1
+	.byte	85
+	.word	0,0
+.L120:
+	.word	-1,.L45,.L185-.L45,.L121-.L45
+	.half	1
+	.byte	85
+	.word	0,0
+.L124:
+	.word	-1,.L45,.L187-.L45,.L125-.L45
+	.half	1
+	.byte	85
+	.word	0,0
+.L122:
+	.word	-1,.L45,.L186-.L45,.L123-.L45
 	.half	1
 	.byte	85
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_loc'
 .L94:
-	.word	-1,.L43,0,.L162-.L43
+	.word	-1,.L43,0,.L172-.L43
 	.half	1
 	.byte	84
-	.word	.L163-.L43,.L92-.L43
+	.word	.L173-.L43,.L92-.L43
 	.half	1
 	.byte	88
 	.word	0,0
@@ -22942,7 +23093,7 @@ ULT_PINS:	.type	object
 .L102:
 	.word	0,0
 .L108:
-	.word	-1,.L43,.L167-.L43,.L168-.L43
+	.word	-1,.L43,.L177-.L43,.L178-.L43
 	.half	1
 	.byte	82
 	.word	.L31-.L43,.L20-.L43
@@ -22952,38 +23103,38 @@ ULT_PINS:	.type	object
 .L96:
 	.word	0,0
 .L97:
-	.word	-1,.L43,.L164-.L43,.L165-.L43
+	.word	-1,.L43,.L174-.L43,.L175-.L43
 	.half	2
 	.byte	144,37
-	.word	.L166-.L43,.L20-.L43
+	.word	.L176-.L43,.L20-.L43
 	.half	2
 	.byte	144,38
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('sendTrigger')
 	.sect	'.debug_loc'
-.L141:
+.L151:
 	.word	0,0
-.L132:
-	.word	-1,.L39,0,.L154-.L39
+.L142:
+	.word	-1,.L39,0,.L164-.L39
 	.half	1
 	.byte	84
-	.word	.L155-.L39,.L131-.L39
+	.word	.L165-.L39,.L141-.L39
 	.half	1
 	.byte	88
 	.word	0,0
-.L139:
+.L149:
 	.word	0,0
-.L137:
+.L147:
 	.word	0,0
 .L38:
-	.word	-1,.L39,0,.L131-.L39
+	.word	-1,.L39,0,.L141-.L39
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('ultrasonicInit')
 	.sect	'.debug_loc'
 .L91:
-	.word	-1,.L37,.L153-.L37,.L88-.L37
+	.word	-1,.L37,.L163-.L37,.L88-.L37
 	.half	1
 	.byte	88
 	.word	0,0
@@ -22995,12 +23146,12 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_loc',debug,cluster('ultrasonic_getDistanceCm')
 	.sect	'.debug_loc'
 .L111:
-	.word	-1,.L41,0,.L156-.L41
+	.word	-1,.L41,0,.L166-.L41
 	.half	1
 	.byte	84
 	.word	0,0
 .L114:
-	.word	-1,.L41,.L158-.L41,.L161-.L41
+	.word	-1,.L41,.L168-.L41,.L171-.L41
 	.half	1
 	.byte	82
 	.word	.L14-.L41,.L12-.L41
@@ -23008,15 +23159,15 @@ ULT_PINS:	.type	object
 	.byte	82
 	.word	0,0
 .L112:
-	.word	-1,.L41,.L156-.L41,.L157-.L41
+	.word	-1,.L41,.L166-.L41,.L167-.L41
 	.half	1
 	.byte	82
-	.word	.L11-.L41,.L158-.L41
+	.word	.L11-.L41,.L168-.L41
 	.half	1
 	.byte	82
 	.word	0,0
 .L113:
-	.word	-1,.L41,.L159-.L41,.L160-.L41
+	.word	-1,.L41,.L169-.L41,.L170-.L41
 	.half	1
 	.byte	95
 	.word	0,0
@@ -23027,42 +23178,42 @@ ULT_PINS:	.type	object
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('ultrasonic_getDistanceFiltered')
 	.sect	'.debug_loc'
-.L122:
-	.word	-1,.L35,0,.L149-.L35
+.L132:
+	.word	-1,.L35,0,.L159-.L35
 	.half	1
 	.byte	84
-	.word	.L150-.L35,.L121-.L35
+	.word	.L160-.L35,.L131-.L35
 	.half	1
 	.byte	88
 	.word	0,0
-.L126:
-	.word	-1,.L35,.L151-.L35,.L3-.L35
+.L136:
+	.word	-1,.L35,.L161-.L35,.L3-.L35
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
-.L130:
-	.word	-1,.L35,.L152-.L35,.L121-.L35
+.L140:
+	.word	-1,.L35,.L162-.L35,.L131-.L35
 	.half	1
 	.byte	81
 	.word	0,0
-.L123:
-	.word	-1,.L35,.L149-.L35,.L7-.L35
+.L133:
+	.word	-1,.L35,.L159-.L35,.L7-.L35
 	.half	1
 	.byte	82
 	.word	0,0
-.L127:
-	.word	-1,.L35,.L128-.L35,.L121-.L35
+.L137:
+	.word	-1,.L35,.L138-.L35,.L131-.L35
 	.half	5
 	.byte	144,32,157,32,0
 	.word	0,0
 .L34:
-	.word	-1,.L35,0,.L121-.L35
+	.word	-1,.L35,0,.L131-.L35
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L325:
+.L350:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -23070,25 +23221,25 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('ultrasonic_getDistanceFiltered')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L35,.L121-.L35
+	.word	.L350,.L35,.L131-.L35
 	.sdecl	'.debug_frame',debug,cluster('ultrasonicInit')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L37,.L88-.L37
+	.word	.L350,.L37,.L88-.L37
 	.sdecl	'.debug_frame',debug,cluster('sendTrigger')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L39,.L131-.L39
+	.word	.L350,.L39,.L141-.L39
 	.sdecl	'.debug_frame',debug,cluster('ultrasonic_getDistanceCm')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L41,.L110-.L41
+	.word	.L350,.L41,.L110-.L41
 	.sdecl	'.debug_frame',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L43,.L92-.L43
+	.word	.L350,.L43,.L92-.L43
 	.sdecl	'.debug_frame',debug,cluster('diagnoseUltrasonicSensor')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L325,.L45,.L115-.L45
+	.word	.L350,.L45,.L115-.L45
 	; Module end

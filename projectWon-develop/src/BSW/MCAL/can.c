@@ -14,24 +14,35 @@ McmcanType g_mcmcan; /* Global MCMCAN configuration and control structure    */
 static uint8 g_drive_speed = 0;   // 0~100 (%)
 static uint8 g_drive_dir = 5;   // 설계서의 초기값(정지:5)
 
-static const char* dirToText(uint8 dirByte)
+static const char* dirToText (uint8 dirByte)
 {
     // ASCII('8')도, 숫자(8)도 모두 대응
     uint8 d = dirByte;
     if (d >= '0' && d <= '9')
-        d = (uint8)(d - '0');
+        d = (uint8) (d - '0');
 
-    switch (d) {
-    case 8: return "전진";
-    case 2: return "후진";
-    case 4: return "좌";
-    case 6: return "우";
-    case 7: return "좌전진";
-    case 9: return "우전진";
-    case 1: return "좌후진";
-    case 3: return "우후진";
-    case 5: return "정지";
-    default: return "알수없음";
+    switch (d)
+    {
+        case 8 :
+            return "전진";
+        case 2 :
+            return "후진";
+        case 4 :
+            return "좌";
+        case 6 :
+            return "우";
+        case 7 :
+            return "좌전진";
+        case 9 :
+            return "우전진";
+        case 1 :
+            return "좌후진";
+        case 3 :
+            return "우후진";
+        case 5 :
+            return "정지";
+        default :
+            return "알수없음";
     }
 }
 
@@ -78,9 +89,9 @@ static inline void canSend8 (uint32 id, const uint8 *d)
 }
 
 // ★ 추가: RPi로 이벤트(E0~E5) 보내는 헬퍼 (STD ID 0x124)
-static inline void canSendEvent(uint8 eid, const uint8* payload, uint8 len)
+static inline void canSendEvent (uint8 eid, const uint8 *payload, uint8 len)
 {
-    uint8 tx[8] = { 0 };
+    uint8 tx[8] = {0};
     tx[0] = eid;                          // Byte0 = EID (0xE0~0xE5)
     for (uint8 i = 0; i < len && i < 7; ++i)
         tx[1 + i] = payload[i];           // Byte1.. = 데이터(최대 7B)
@@ -88,9 +99,9 @@ static inline void canSendEvent(uint8 eid, const uint8* payload, uint8 len)
 }
 
 // ★ 추가: drive 상태 이벤트(E0) 발행
-static inline void sendDriveStateEvent(void)
+static inline void sendDriveStateEvent (void)
 {
-    uint8 data[2] = { g_drive_speed, g_drive_dir }; // Byte0=speed, Byte1=dir
+    uint8 data[2] = {g_drive_speed, g_drive_dir}; // Byte0=speed, Byte1=dir
     canSendEvent(0xE0, data, 2);
 }
 
@@ -245,7 +256,7 @@ void udsHandler (unsigned char *rxData, int rxLen)
                 }
                 else if (sub_function == 0x80)
                 { // sub-function 0x80 (응답 불필요)
-                    // 아무 응답도 안 보냄
+                  // 아무 응답도 안 보냄
                 }
             }
 
@@ -368,10 +379,60 @@ void udsHandler (unsigned char *rxData, int rxLen)
 
                     }
 
-                    case 0x1001 :
+                    case 0x2000 :
                     { // 초음파 (좌) 센서 거리 요청
                       // 1. 좌측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
                         float distance_cm = ultrasonic_getDistanceCm(ULT_LEFT);
+
+                        // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
+                        if (distance_cm < 0)
+                        {
+                            uint8 nr_payload[3] = {0x7F, 0x22, 0x31}; // 0x31는 requestOutOfRange
+                            isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                            break;
+                        }
+
+                        // 3. float 값을 정수로 변환(소수점 첫째 자리까지 표현하기 위해 10 곱함)
+                        // ex) 15.7cm => 157
+                        uint16 scaled_distance = (uint16) (distance_cm * 10.0f);
+
+                        // 4. 변환된 2바이트 정수 값을 페이로드에 담아 전송
+                        uint8 payload[5] = {0x62, 0x10, 0x01, (uint8) (scaled_distance >> 8), (uint8) (scaled_distance
+                                & 0xFF)};
+
+                        isotp_send_response(0x7E8, payload, sizeof(payload));
+
+                        break;
+                    }
+                    case 0x2001 :
+                    { // 초음파 (우) 센서 거리 요청
+                      // 1. 우측 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
+                        float distance_cm = ultrasonic_getDistanceCm(ULT_RIGHT);
+
+                        // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
+                        if (distance_cm < 0)
+                        {
+                            uint8 nr_payload[3] = {0x7F, 0x22, 0x31}; // 0x31는 requestOutOfRange
+                            isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                            break;
+                        }
+
+                        // 3. float 값을 정수로 변환(소수점 첫째 자리까지 표현하기 위해 10 곱함)
+                        // ex) 15.7cm => 157
+                        uint16 scaled_distance = (uint16) (distance_cm * 10.0f);
+
+                        // 4. 변환된 2바이트 정수 값을 페이로드에 담아 전송
+                        uint8 payload[5] = {0x62, 0x10, 0x01, (uint8) (scaled_distance >> 8), (uint8) (scaled_distance
+                                & 0xFF)};
+
+                        isotp_send_response(0x7E8, payload, sizeof(payload));
+
+                        break;
+                    }
+                    case 0x2002 :
+                    { // 초음파 (후방) 센서 거리 요청
+                      // 1. 후방 초음파 센서의 거리를 cm 단위로 반환하는 함수 호출한다
+                        float distance_cm = ultrasonic_getDistanceCm(ULT_REAR);
 
                         // 2. 만약 센서 측정에 실패했다면, 부정 응답(NRC)를 보낸다.
                         if (distance_cm < 0)
@@ -540,166 +601,167 @@ void canRxIsrHandler (void)
     }
     else if (rxID == 0x123) // ★ RPi -> ECU 제어 명령 프레임
     {
-        if (rxLen < 1) return;              // 최소 길이 확인
+        if (rxLen < 1)
+            return;              // 최소 길이 확인
         const uint8 cmd = rxData[0];
 
         switch (cmd)
         {
-        case 0x10: /* SET_SPEED: Byte1 = PWM% (0~100) */
-        {
-            if (rxLen >= 2)
+            case 0x10 : /* SET_SPEED: Byte1 = PWM% (0~100) */
             {
-                uint8 pct = rxData[1];
-                g_drive_speed = pct;
-                // TODO: 실제 모터 PWM 함수가 있다면 호출하세요 (예: Motor_SetPwm(pct);)
-                sendDriveStateEvent(); // E0 [speed][dir]
-                myPrintf("SET_SPEED: %u\n", pct);
+                if (rxLen >= 2)
+                {
+                    uint8 pct = rxData[1];
+                    g_drive_speed = pct;
+                    // TODO: 실제 모터 PWM 함수가 있다면 호출하세요 (예: Motor_SetPwm(pct);)
+                    sendDriveStateEvent(); // E0 [speed][dir]
+                    myPrintf("SET_SPEED: %u\n", pct);
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x11: /* SET_DIR: Byte1 = 방향코드 ('8','2','4','6','7','9','1','3') */
-        {
-            if (rxLen >= 2)
+            case 0x11 : /* SET_DIR: Byte1 = 방향코드 ('8','2','4','6','7','9','1','3') */
             {
-                uint8 dir = rxData[1];
-                g_drive_dir = dir;
-                // TODO: 실제 방향 제어 함수 (예: Drive_SetDir(dir);)
-                sendDriveStateEvent();
+                if (rxLen >= 2)
+                {
+                    uint8 dir = rxData[1];
+                    g_drive_dir = dir;
+                    // TODO: 실제 방향 제어 함수 (예: Drive_SetDir(dir);)
+                    sendDriveStateEvent();
 
-                const char* text = dirToText(dir);
-                myPrintf("SET_DIR: %s (raw=0x%02X)\n", text, dir);
+                    const char *text = dirToText(dir);
+                    myPrintf("SET_DIR: %s (raw=0x%02X)\n", text, dir);
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x12: /* SOFT_STOP */
-        {
-            if (rxLen >= 2)
+            case 0x12 : /* SOFT_STOP */
             {
-                g_drive_speed = 0;
-                // TODO: 실제 감속/정지 함수 (예: Drive_SoftStop();)
-                sendDriveStateEvent();
-                myPrintf("SOFT_STOP\n");
+                if (rxLen >= 2)
+                {
+                    g_drive_speed = 0;
+                    // TODO: 실제 감속/정지 함수 (예: Drive_SoftStop();)
+                    sendDriveStateEvent();
+                    myPrintf("SOFT_STOP\n");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x20: /* AEB_ENABLE: Byte1 = 0/1 */
-        {
-            if (rxLen >= 2)
+            case 0x20 : /* AEB_ENABLE: Byte1 = 0/1 */
             {
-                uint8 onoff = rxData[1] ? 1 : 0;
-                // 프로젝트에 이미 있는 마스터 스위치 사용
-                g_config.isAebEnabled = onoff;
-                // AEB 상태 이벤트(E1): 설계서대로 0:OFF, 1:ON, 2:DECEL/STOP 등 필요 시 확장
-                uint8 st = onoff;
-                canSendEvent(0xE1, &st, 1);
-                myPrintf("AEB_ENABLE: %s\n", onoff ? "ON" : "OFF");
+                if (rxLen >= 2)
+                {
+                    uint8 onoff = rxData[1] ? 1 : 0;
+                    // 프로젝트에 이미 있는 마스터 스위치 사용
+                    g_config.isAebEnabled = onoff;
+                    // AEB 상태 이벤트(E1): 설계서대로 0:OFF, 1:ON, 2:DECEL/STOP 등 필요 시 확장
+                    uint8 st = onoff;
+                    canSendEvent(0xE1, &st, 1);
+                    myPrintf("AEB_ENABLE: %s\n", onoff ? "ON" : "OFF");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x21: /* AEB_STATUS */
-        {
-            if (rxLen >= 2)
+            case 0x21 : /* AEB_STATUS */
             {
-                // 현재 상태를 그대로 반송 (간단 구현)
-                uint8 st = g_config.isAebEnabled ? 1 : 0;
-                canSendEvent(0xE1, &st, 1);
-                myPrintf("AEB_STATUS: %s\n", st ? "ON" : "OFF");
+                if (rxLen >= 2)
+                {
+                    // 현재 상태를 그대로 반송 (간단 구현)
+                    uint8 st = g_config.isAebEnabled ? 1 : 0;
+                    canSendEvent(0xE1, &st, 1);
+                    myPrintf("AEB_STATUS: %s\n", st ? "ON" : "OFF");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x30: /* FCW_WARN (부저/LED 경고 트리거) */
-        {
-            if (rxLen >= 2)
+            case 0x30 : /* FCW_WARN (부저/LED 경고 트리거) */
             {
-                // TODO: 실제 부저/LED 경고 트리거
-                uint8 alert = 1;
-                canSendEvent(0xE2, &alert, 1); // FCW Alert 이벤트
-                myPrintf("FCW_WARN\n");
+                if (rxLen >= 2)
+                {
+                    // TODO: 실제 부저/LED 경고 트리거
+                    uint8 alert = 1;
+                    canSendEvent(0xE2, &alert, 1); // FCW Alert 이벤트
+                    myPrintf("FCW_WARN\n");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x40: /* AUTOPARK_START */
-        {
-            if (rxLen >= 2)
+            case 0x40 : /* AUTOPARK_START */
             {
-                // TODO: 자율주차 FSM 시작
-                // 진행률 이벤트 예시 발행 (필요시 FSM에서 주기적으로 보내세요)
-                uint8 pr = 0;
-                canSendEvent(0xE3, &pr, 1);
-                myPrintf("AUTOPARK_START\n");
+                if (rxLen >= 2)
+                {
+                    // TODO: 자율주차 FSM 시작
+                    // 진행률 이벤트 예시 발행 (필요시 FSM에서 주기적으로 보내세요)
+                    uint8 pr = 0;
+                    canSendEvent(0xE3, &pr, 1);
+                    myPrintf("AUTOPARK_START\n");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x41: /* AUTOPARK_CANCEL */
-        {
-            if (rxLen >= 2)
+            case 0x41 : /* AUTOPARK_CANCEL */
             {
-                // TODO: 자율주차 FSM 취소
-                uint8 pr = 0;
-                canSendEvent(0xE3, &pr, 1);
-                myPrintf("AUTOPARK_CANCEL\n");
+                if (rxLen >= 2)
+                {
+                    // TODO: 자율주차 FSM 취소
+                    uint8 pr = 0;
+                    canSendEvent(0xE3, &pr, 1);
+                    myPrintf("AUTOPARK_CANCEL\n");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x42: /* AUTOPARK_STATUS */
-        {
-            if (rxLen >= 2)
+            case 0x42 : /* AUTOPARK_STATUS */
             {
-                // TODO: 실제 진행률 조회 함수로 교체 (예: Autopark_Progress())
-                uint8 pr = 60;
-                canSendEvent(0xE3, &pr, 1);
-                myPrintf("AUTOPARK_STATUS: %u%%\n", pr);
+                if (rxLen >= 2)
+                {
+                    // TODO: 실제 진행률 조회 함수로 교체 (예: Autopark_Progress())
+                    uint8 pr = 60;
+                    canSendEvent(0xE3, &pr, 1);
+                    myPrintf("AUTOPARK_STATUS: %u%%\n", pr);
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x50: /* AUTH_LOGIN: Byte1..4 = ASCII PW (최대 4B) */
-        {
-            if (rxLen >= 2)
+            case 0x50 : /* AUTH_LOGIN: Byte1..4 = ASCII PW (최대 4B) */
             {
-                char pwd[5] = { 0, 0, 0, 0, 0 };
-                uint8 copy = (rxLen - 1) > 4 ? 4 : (rxLen - 1); // ★ 실제 받은 길이만큼만
-                for (int i = 0; i < copy; i++)
-                    pwd[i] = rxData[1 + i];
-                pwd[copy] = '\0';
+                if (rxLen >= 2)
+                {
+                    char pwd[5] = {0, 0, 0, 0, 0};
+                    uint8 copy = (rxLen - 1) > 4 ? 4 : (rxLen - 1); // ★ 실제 받은 길이만큼만
+                    for (int i = 0; i < copy; i++)
+                        pwd[i] = rxData[1 + i];
+                    pwd[copy] = '\0';
 
-                uint8 ok = (strcmp(pwd, "1234") == 0) ? 1 : 0;
-                // TODO: 시스템 인증 상태 갱신
-                canSendEvent(0xE4, &ok, 1);
+                    uint8 ok = (strcmp(pwd, "1234") == 0) ? 1 : 0;
+                    // TODO: 시스템 인증 상태 갱신
+                    canSendEvent(0xE4, &ok, 1);
 
-                myPrintf("AUTH_LOGIN_PWD: \"%s\"  [", pwd);
-                for (uint8 i = 0; i < copy; ++i)
-                    myPrintf("%s0x%02X", (i ? ", " : ""), (uint8)pwd[i]);
-                myPrintf("]\n");
-                myPrintf("AUTH_LOGIN_STATUS: %s\n", ok ? "OK" : "NOT OK");
+                    myPrintf("AUTH_LOGIN_PWD: \"%s\"  [", pwd);
+                    for (uint8 i = 0; i < copy; ++i)
+                        myPrintf("%s0x%02X", (i ? ", " : ""), (uint8) pwd[i]);
+                    myPrintf("]\n");
+                    myPrintf("AUTH_LOGIN_STATUS: %s\n", ok ? "OK" : "NOT OK");
+                }
+                break;
             }
-            break;
-        }
 
-        case 0x60: /* SYS_HEARTBEAT */
-        {
-            if (rxLen >= 2)
+            case 0x60 : /* SYS_HEARTBEAT */
             {
-                // 필요하면 아무 동작 없이도 OK
-                uint8 hb = 0x00;
-                canSendEvent(0xE4 /*또는 별도 EID 필요시*/, &hb, 1);
-                myPrintf("SYS_HEARTBEAT\n");
+                if (rxLen >= 2)
+                {
+                    // 필요하면 아무 동작 없이도 OK
+                    uint8 hb = 0x00;
+                    canSendEvent(0xE4 /*또는 별도 EID 필요시*/, &hb, 1);
+                    myPrintf("SYS_HEARTBEAT\n");
+                }
+                break;
             }
-            break;
-        }
 
-        default:
-            // 알 수 없는 명령은 무시 (원하면 0x90 ACK 프레임 규격 추가 가능)
-            myPrintf("Unknown Command\n");
-            break;
+            default :
+                // 알 수 없는 명령은 무시 (원하면 0x90 ACK 프레임 규격 추가 가능)
+                myPrintf("Unknown Command\n");
+                break;
         }
     }
     // else if (rxID == 0xXXX) { ... }

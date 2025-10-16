@@ -5,8 +5,12 @@
 DtcRecord g_dtcStorage[MAX_DTCS] = {
     { DTC_TOF_TIMEOUT,    0x00 }, // 초기 상태: 고장 없음
     { DTC_TOF_OUTOFRANGE, 0x00 },
-    { DTC_LEFT_ULTRASONIC_TIMEOUT, 0x00 },
-    { DTC_LEFT_ULTRASONIC_OUTOFRANGE, 0x00 },
+    { DTC_ULT_LEFT_TIMEOUT, 0x00 },
+    { DTC_ULT_LEFT_OUTOFRANGE, 0x00 },
+    { DTC_ULT_RIGHT_TIMEOUT, 0x00 },
+    { DTC_ULT_RIGHT_OUTOFRANGE, 0x00 },
+    { DTC_ULT_REAR_TIMEOUT, 0x00 },
+    { DTC_ULT_REAR_OUTOFRANGE, 0x00 },
     // {0, 0}, ... 나머지 공간은 0으로 초기화
 };
 

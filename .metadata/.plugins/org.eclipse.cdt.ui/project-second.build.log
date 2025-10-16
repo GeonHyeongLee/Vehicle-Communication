@@ -1,8 +1,50 @@
-15:46:58 **** Incremental Build of configuration TriCore Debug (TASKING) for project project-second ****
+14:29:29 **** Build of configuration TriCore Debug (TASKING) for project project-second ****
 amk -j12 all 
 TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
-cctc -cs --dep-file="BSW/MCAL/can.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/can.src" "../BSW/MCAL/can.c"
-astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/can.o" "BSW/MCAL/can.src"
+cctc -cs --dep-file="BSW/Service/battery.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/battery.src" "../BSW/Service/battery.c"
+cctc -cs --dep-file="BSW/Service/bluetooth.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/bluetooth.src" "../BSW/Service/bluetooth.c"
+cctc -cs --dep-file="BSW/Service/buzzerport.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/buzzerport.src" "../BSW/Service/buzzerport.c"
+cctc -cs --dep-file="BSW/Service/config.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/config.src" "../BSW/Service/config.c"
+cctc -cs --dep-file="BSW/Service/dtc.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/dtc.src" "../BSW/Service/dtc.c"
+cctc -cs --dep-file="BSW/Service/ledport.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/ledport.src" "../BSW/Service/ledport.c"
+cctc -cs --dep-file="BSW/Service/motor.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/motor.src" "../BSW/Service/motor.c"
+cctc -cs --dep-file="BSW/Service/routine_control.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/routine_control.src" "../BSW/Service/routine_control.c"
+cctc -cs --dep-file="BSW/Service/session.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/session.src" "../BSW/Service/session.c"
+cctc -cs --dep-file="BSW/Service/tof.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/tof.src" "../BSW/Service/tof.c"
+cctc -cs --dep-file="BSW/Service/uart.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/uart.src" "../BSW/Service/uart.c"
+cctc -cs --dep-file="BSW/Service/ultrasonic.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/ultrasonic.src" "../BSW/Service/ultrasonic.c"
+ctc W508: ["../BSW/Service/routine_control.c" 1/1] empty source file
+0 errors, 1 warnings
+cctc -cs --dep-file="BSW/Service/util.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/util.src" "../BSW/Service/util.c"
+ctc W505: ["../BSW/Service/config.c" 18/5] implicit declaration of function "strcpy"
+ctc W577: ["../BSW/Service/config.c" 18/11] calling a function without a prototype
+ctc W577: ["../BSW/Service/config.c" 19/11] calling a function without a prototype
+ctc W577: ["../BSW/Service/config.c" 20/11] calling a function without a prototype
+ctc W577: ["../BSW/Service/config.c" 21/11] calling a function without a prototype
+ctc W577: ["../BSW/Service/config.c" 22/11] calling a function without a prototype
+0 errors, 6 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/routine_control.o" "BSW/Service/routine_control.src"
+ctc W560: ["../BSW/Service/battery.c" 47/18] possible truncation at implicit conversion to type "unsigned char"
+0 errors, 1 warnings
+ctc W505: ["../BSW/Service/session.c" 39/9] implicit declaration of function "myPrintf"
+ctc W577: ["../BSW/Service/session.c" 39/17] calling a function without a prototype
+ctc W505: ["../BSW/Service/session.c" 64/13] implicit declaration of function "myPrintf"
+ctc W577: ["../BSW/Service/session.c" 64/21] calling a function without a prototype
+ctc W505: ["../BSW/Service/session.c" 67/13] implicit declaration of function "myPrintf"
+ctc W577: ["../BSW/Service/session.c" 67/21] calling a function without a prototype
+0 errors, 6 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/battery.o" "BSW/Service/battery.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/buzzerport.o" "BSW/Service/buzzerport.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/config.o" "BSW/Service/config.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/dtc.o" "BSW/Service/dtc.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/ledport.o" "BSW/Service/ledport.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/session.o" "BSW/Service/session.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/ultrasonic.o" "BSW/Service/ultrasonic.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/util.o" "BSW/Service/util.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/motor.o" "BSW/Service/motor.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/tof.o" "BSW/Service/tof.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/bluetooth.o" "BSW/Service/bluetooth.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/uart.o" "BSW/Service/uart.src"
 Building target: project-second.elf
 Invoking: TASKING Linker
 cctc -f .project-second.elf.opt
@@ -11,10 +53,10 @@ Finished building target: project-second.elf
 Invoking: Print Size
 elfsize  "project-second.elf"
 Total sizes:
-ROM: 0x9363 (37731) = code: 0x7a7e (31358) + romdata: 0x18e5 (6373)
-RAM: 0x9918 (39192) = data + bss
+ROM: 0x9dc7 (40391) = code: 0x835a (33626) + romdata: 0x1a6d (6765)
+RAM: 0x991e (39198) = data + bss
 Finished building: project-second.siz
  
 
-15:47:00 Build Finished. 0 errors, 0 warnings. (took 2s.231ms)
+14:29:33 Build Finished. 0 errors, 14 warnings. (took 4s.511ms)
 

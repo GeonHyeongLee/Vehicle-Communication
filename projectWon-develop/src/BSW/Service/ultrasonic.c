@@ -1,6 +1,5 @@
 #include "ultrasonic.h"
 #include "stdbool.h"
-#include "dtc.h"
 // 최근 5개 데이터 평균
 #define FILTER_BUFFER_SIZE 5
 
@@ -32,7 +31,6 @@ float ultrasonic_getDistanceFiltered(UltraDir dir)
             }
             is_filter_primed[dir] = true;
         }
-        // --- 여기까지 ---
 
         // 버퍼의 다음 위치에 새로운 값을 덮어씁니다 (순환 방식).
         distance_buffers[dir][buffer_indexes[dir]] = new_distance;
@@ -136,14 +134,30 @@ void diagnoseUltrasonicSensor(void) {
     // 좌측 센서 진단
     // cm 단위 거리 값 가져옴 (-1 : 신호 없음, -2 : 범위 초과)
     float distance_left = ultrasonic_getDistanceCm(ULT_LEFT);
+    float distance_right = ultrasonic_getDistanceCm(ULT_RIGHT);
+    float distance_rear = ultrasonic_getDistanceCm(ULT_REAR);
+
 
     // 1. 신호/회로 고장 진단 (연결 해제)
     // ultrasonic_getDistanceCm이 -1.0f 반환했는지 확인
     bool isSignalFault_left = (distance_left == -1.0f);
-    dtc_updateStatus(DTC_LEFT_ULTRASONIC_TIMEOUT, isSignalFault_left);
+    dtc_updateStatus(DTC_ULT_LEFT_TIMEOUT, isSignalFault_left);
+
+    bool isSignalFault_right = (distance_right == -1.0f);
+    dtc_updateStatus(DTC_ULT_RIGHT_TIMEOUT, isSignalFault_right);
+
+    bool isSignalFault_rear = (distance_rear == -1.0f);
+    dtc_updateStatus(DTC_ULT_REAR_TIMEOUT, isSignalFault_rear);
+
 
     // 2. 측정값 범위 고장 진단
     // ultrasonic_getDistanceCm이 -2.0f 반환했는지 확인
     bool isRangeFault_left = (distance_left == -2.0f);
-    dtc_updateStatus(DTC_LEFT_ULTRASONIC_OUTOFRANGE, isRangeFault_left);
+    dtc_updateStatus(DTC_ULT_LEFT_OUTOFRANGE, isRangeFault_left);
+
+    bool isRangeFault_right = (distance_right == -2.0f);
+    dtc_updateStatus(DTC_ULT_RIGHT_OUTOFRANGE, isRangeFault_right);
+
+    bool isRangeFault_rear = (distance_rear == -2.0f);
+    dtc_updateStatus(DTC_ULT_REAR_OUTOFRANGE, isRangeFault_rear);
 }

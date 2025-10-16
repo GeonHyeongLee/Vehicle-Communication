@@ -13,6 +13,8 @@
 #include "port.h"
 #include "util.h"
 
+#include "dtc.h"
+
 typedef struct
 {
     GpioPin trigger;
