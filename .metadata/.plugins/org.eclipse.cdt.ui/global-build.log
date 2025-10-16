@@ -2163,3 +2163,193 @@ ROM: 0x9dc7 (40391) = code: 0x835a (33626) + romdata: 0x1a6d (6765)
 RAM: 0x991e (39198) = data + bss
 Finished building: project-second.siz
  
+Build started...
+14:38:56 **** Incremental Build of configuration TriCore Debug (TASKING) for project project-second ****
+amk -j12 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
+cctc -cs --dep-file="app/main0.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "app/main0.src" "../app/main0.c"
+cctc -cs --dep-file="app/systeminit.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "app/systeminit.src" "../app/systeminit.c"
+cctc -cs --dep-file="BSW/Service/bluetooth.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/bluetooth.src" "../BSW/Service/bluetooth.c"
+cctc -cs --dep-file="BSW/Service/dtc.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/dtc.src" "../BSW/Service/dtc.c"
+cctc -cs --dep-file="BSW/Service/motor.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/motor.src" "../BSW/Service/motor.c"
+cctc -cs --dep-file="BSW/Service/routine_control.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/routine_control.src" "../BSW/Service/routine_control.c"
+cctc -cs --dep-file="BSW/Service/tof.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/tof.src" "../BSW/Service/tof.c"
+cctc -cs --dep-file="BSW/Service/uart.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/uart.src" "../BSW/Service/uart.c"
+cctc -cs --dep-file="BSW/MCAL/asclin1.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/asclin1.src" "../BSW/MCAL/asclin1.c"
+cctc -cs --dep-file="BSW/MCAL/can.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/can.src" "../BSW/MCAL/can.c"
+cctc -cs --dep-file="BSW/MCAL/gpt12.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/gpt12.src" "../BSW/MCAL/gpt12.c"
+cctc -cs --dep-file="ASW/emergencystop/aeb.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/emergencystop/aeb.src" "../ASW/emergencystop/aeb.c"
+cctc -cs --dep-file="ASW/drivecontrol/control.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/drivecontrol/control.src" "../ASW/drivecontrol/control.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/dtc.o" "BSW/Service/dtc.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/tof.o" "BSW/Service/tof.src"
+ctc W505: ["../app/main0.c" 23/9] implicit declaration of function "diagnoseTofSensor"
+ctc W577: ["../app/main0.c" 23/26] calling a function without a prototype
+0 errors, 2 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/routine_control.o" "BSW/Service/routine_control.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "app/main0.o" "app/main0.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/uart.o" "BSW/Service/uart.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/gpt12.o" "BSW/MCAL/gpt12.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/motor.o" "BSW/Service/motor.src"
+cctc -cs --dep-file="ASW/autopark/autopark.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/autopark/autopark.src" "../ASW/autopark/autopark.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "app/systeminit.o" "app/systeminit.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/bluetooth.o" "BSW/Service/bluetooth.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/drivecontrol/control.o" "ASW/drivecontrol/control.src"
+cctc -cs --dep-file="ASW/auth/auth.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/auth/auth.src" "../ASW/auth/auth.c"
+cctc -cs --dep-file="ASW/buzzer.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/buzzer.src" "../ASW/buzzer.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/emergencystop/aeb.o" "ASW/emergencystop/aeb.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/asclin1.o" "BSW/MCAL/asclin1.src"
+cctc -cs --dep-file="ASW/fsm.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/fsm.src" "../ASW/fsm.c"
+cctc -cs --dep-file="Cpu0_Main.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "Cpu0_Main.src" "../Cpu0_Main.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/can.o" "BSW/MCAL/can.src"
+ctc W505: ["../ASW/autopark/autopark.c" 169/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 169/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 175/36] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 179/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 179/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 201/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 201/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 207/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 209/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 209/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 243/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 243/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 248/37] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 250/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 250/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 273/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 273/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 283/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 285/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 285/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 308/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 308/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 318/33] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 323/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 323/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 349/17] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 349/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 353/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 357/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 361/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 365/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 369/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 373/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 377/30] calling a function without a prototype
+0 errors, 34 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/autopark/autopark.o" "ASW/autopark/autopark.src"
+ctc W525: ["../ASW/auth/auth.c" 44/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/auth/auth.c" 46/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/auth/auth.c" 46/26] calling a function without a prototype
+ctc W505: ["../ASW/auth/auth.c" 58/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/auth/auth.c" 58/22] calling a function without a prototype
+0 errors, 5 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/auth/auth.o" "ASW/auth/auth.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/fsm.o" "ASW/fsm.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "Cpu0_Main.o" "Cpu0_Main.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/buzzer.o" "ASW/buzzer.src"
+Building target: project-second.elf
+Invoking: TASKING Linker
+cctc -f .project-second.elf.opt
+Finished building target: project-second.elf
+ 
+Invoking: Print Size
+elfsize  "project-second.elf"
+Total sizes:
+ROM: 0x9efc (40700) = code: 0x8482 (33922) + romdata: 0x1a7a (6778)
+RAM: 0x991e (39198) = data + bss
+Finished building: project-second.siz
+ 
+Build started...
+14:40:02 **** Incremental Build of configuration TriCore Debug (TASKING) for project project-second ****
+amk -j12 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
+cctc -cs --dep-file="app/main0.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "app/main0.src" "../app/main0.c"
+cctc -cs --dep-file="app/systeminit.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "app/systeminit.src" "../app/systeminit.c"
+cctc -cs --dep-file="BSW/Service/bluetooth.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/bluetooth.src" "../BSW/Service/bluetooth.c"
+cctc -cs --dep-file="BSW/Service/motor.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/motor.src" "../BSW/Service/motor.c"
+cctc -cs --dep-file="BSW/Service/routine_control.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/routine_control.src" "../BSW/Service/routine_control.c"
+cctc -cs --dep-file="BSW/Service/tof.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/tof.src" "../BSW/Service/tof.c"
+cctc -cs --dep-file="BSW/Service/uart.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/Service/uart.src" "../BSW/Service/uart.c"
+cctc -cs --dep-file="BSW/MCAL/asclin1.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/asclin1.src" "../BSW/MCAL/asclin1.c"
+cctc -cs --dep-file="BSW/MCAL/can.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/can.src" "../BSW/MCAL/can.c"
+cctc -cs --dep-file="BSW/MCAL/gpt12.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "BSW/MCAL/gpt12.src" "../BSW/MCAL/gpt12.c"
+cctc -cs --dep-file="ASW/emergencystop/aeb.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/emergencystop/aeb.src" "../ASW/emergencystop/aeb.c"
+cctc -cs --dep-file="ASW/drivecontrol/control.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/drivecontrol/control.src" "../ASW/drivecontrol/control.c"
+cctc -cs --dep-file="ASW/autopark/autopark.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/autopark/autopark.src" "../ASW/autopark/autopark.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "app/systeminit.o" "app/systeminit.src"
+ctc W505: ["../app/main0.c" 23/9] implicit declaration of function "diagnoseTofSensor"
+ctc W577: ["../app/main0.c" 23/26] calling a function without a prototype
+0 errors, 2 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "app/main0.o" "app/main0.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/motor.o" "BSW/Service/motor.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/routine_control.o" "BSW/Service/routine_control.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/bluetooth.o" "BSW/Service/bluetooth.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/tof.o" "BSW/Service/tof.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/gpt12.o" "BSW/MCAL/gpt12.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/Service/uart.o" "BSW/Service/uart.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/asclin1.o" "BSW/MCAL/asclin1.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/emergencystop/aeb.o" "ASW/emergencystop/aeb.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/drivecontrol/control.o" "ASW/drivecontrol/control.src"
+cctc -cs --dep-file="ASW/auth/auth.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/auth/auth.src" "../ASW/auth/auth.c"
+cctc -cs --dep-file="ASW/buzzer.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/buzzer.src" "../ASW/buzzer.c"
+cctc -cs --dep-file="ASW/fsm.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "ASW/fsm.src" "../ASW/fsm.c"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "BSW/MCAL/can.o" "BSW/MCAL/can.src"
+cctc -cs --dep-file="Cpu0_Main.d" --misrac-version=2004 -D__CPU__=tc37x "-fC:/Second_project/second_project/second_project_git/projectWon-develop/src/TriCore Debug (TASKING)/TASKING_C_C___Compiler-Include_paths__-I_.opt" --iso=99 --c++14 --language=+volatile --exceptions --anachronisms --fp-model=3 -O0 --tradeoff=4 --compact-max-size=200 -g -Wc-w544 -Wc-w557 -Ctc37x -Y0 -N0 -Z0 -o "Cpu0_Main.src" "../Cpu0_Main.c"
+ctc W505: ["../ASW/autopark/autopark.c" 169/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 169/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 175/36] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 179/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 179/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 201/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 201/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 207/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 209/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 209/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 243/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 243/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 248/37] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 250/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 250/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 273/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 273/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 283/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 285/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 285/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 308/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 308/26] calling a function without a prototype
+ctc W525: ["../ASW/autopark/autopark.c" 318/33] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/autopark/autopark.c" 323/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 323/22] calling a function without a prototype
+ctc W505: ["../ASW/autopark/autopark.c" 349/17] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/autopark/autopark.c" 349/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 353/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 357/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 361/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 365/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 369/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 373/30] calling a function without a prototype
+ctc W577: ["../ASW/autopark/autopark.c" 377/30] calling a function without a prototype
+0 errors, 34 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/autopark/autopark.o" "ASW/autopark/autopark.src"
+ctc W525: ["../ASW/auth/auth.c" 44/20] discarded 'volatile' qualifier at argument #1: conversion from char volatile * to char const *
+ctc W505: ["../ASW/auth/auth.c" 46/13] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/auth/auth.c" 46/26] calling a function without a prototype
+ctc W505: ["../ASW/auth/auth.c" 58/9] implicit declaration of function "rxBufferFlush"
+ctc W577: ["../ASW/auth/auth.c" 58/22] calling a function without a prototype
+0 errors, 5 warnings
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/auth/auth.o" "ASW/auth/auth.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/buzzer.o" "ASW/buzzer.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "ASW/fsm.o" "ASW/fsm.src"
+astc -Og -Os --no-warnings= --error-limit=42 -o  "Cpu0_Main.o" "Cpu0_Main.src"
+Building target: project-second.elf
+Invoking: TASKING Linker
+cctc -f .project-second.elf.opt
+Finished building target: project-second.elf
+ 
+Invoking: Print Size
+elfsize  "project-second.elf"
+Total sizes:
+ROM: 0x9ef4 (40692) = code: 0x847a (33914) + romdata: 0x1a7a (6778)
+RAM: 0x991e (39198) = data + bss
+Finished building: project-second.siz
+ 

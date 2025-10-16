@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc26004a --dep-file=ASW/autopark/autopark.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\auth -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\autopark -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\MCAL -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Configurations -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\app -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o ASW/autopark/autopark.src ../ASW/autopark/autopark.c"
+	.compiler_invocation	"ctc -f cc17084a --dep-file=ASW/autopark/autopark.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\auth -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\autopark -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\MCAL -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\BSW\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Configurations -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Adc -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Evadc\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -IC:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\app -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o ASW/autopark/autopark.src ../ASW/autopark/autopark.c"
 	.compiler_name		"ctc"
 	;source	'../ASW/autopark/autopark.c'
 
@@ -1326,10 +1326,10 @@ stopDistance:	.type	object
 	.extern	motorMoveForward
 	.extern	motorMoveReverse
 	.extern	motorStop
+	.extern	getDistanceByUltra
 	.extern	buzzerOn
 	.extern	buzzerOff
 	.extern	ledStartBlinking
-	.extern	getDistanceByUltra
 	.extern	Gpt1_Interrupt_Enable
 	.extern	Gpt1_Interrupt_Disable
 	.extern	g_rx_getLine
@@ -11248,28 +11248,28 @@ stopDistance:	.type	object
 	.word	61285
 	.byte	22
 	.word	61329
-	.byte	6,0,32
-	.byte	'buzzerOn',0,29,7,6,1,1,1,1,32
-	.byte	'buzzerOff',0,29,8,6,1,1,1,1,15,30,6,9,1,16
+	.byte	6,0,33
+	.byte	'ultradir',0,29,25,14,1,16
+	.byte	'ULT_LEFT',0,0,16
+	.byte	'ULT_RIGHT',0,1,16
+	.byte	'ULT_REAR',0,2,16
+	.byte	'ULT_SENSORS_NUM',0,3,0,26
+	.byte	'getDistanceByUltra',0,29,33,5
+	.word	661
+	.byte	1,1,1,1,5
+	.byte	'dir',0,29,33,33
+	.word	62624
+	.byte	0,32
+	.byte	'buzzerOn',0,30,7,6,1,1,1,1,32
+	.byte	'buzzerOff',0,30,8,6,1,1,1,1,15,31,6,9,1,16
 	.byte	'LED_RIGHT',0,0,16
 	.byte	'LED_LEFT',0,1,16
 	.byte	'LED_REAR',0,2,16
 	.byte	'LED_BOTH',0,3,16
 	.byte	'LED_NONE',0,4,0,31
-	.byte	'ledStartBlinking',0,30,15,6,1,1,1,1,5
-	.byte	'pos',0,30,15,35
-	.word	62659
-	.byte	0,33
-	.byte	'ultradir',0,31,25,14,1,16
-	.byte	'ULT_LEFT',0,0,16
-	.byte	'ULT_RIGHT',0,1,16
-	.byte	'ULT_REAR',0,2,16
-	.byte	'ULT_SENSORS_NUM',0,3,0,26
-	.byte	'getDistanceByUltra',0,31,33,5
-	.word	661
-	.byte	1,1,1,1,5
-	.byte	'dir',0,31,33,33
-	.word	62759
+	.byte	'ledStartBlinking',0,31,15,6,1,1,1,1,5
+	.byte	'pos',0,31,15,35
+	.word	62770
 	.byte	0,32
 	.byte	'Gpt1_Interrupt_Enable',0,32,34,6,1,1,1,1,32
 	.byte	'Gpt1_Interrupt_Disable',0,32,35,6,1,1,1,1,34
@@ -50490,9 +50490,6 @@ stopDistance:	.type	object
 	.byte	1,3,35,213,1,0,35
 	.byte	'IfxCan_Can_NodeConfig',0,54,233,5,3
 	.word	359386
-	.byte	35
-	.byte	'LedPosition',0,30,12,3
-	.word	62659
 	.byte	37,55,9,9,8,14
 	.byte	'port',0
 	.word	9812
@@ -50501,10 +50498,13 @@ stopDistance:	.type	object
 	.word	820
 	.byte	1,2,35,4,0,35
 	.byte	'GpioPin',0,55,13,3
-	.word	359732
+	.word	359712
 	.byte	35
-	.byte	'UltraDir',0,31,28,3
-	.word	62759
+	.byte	'UltraDir',0,29,28,3
+	.word	62624
+	.byte	35
+	.byte	'LedPosition',0,31,12,3
+	.word	62770
 	.byte	8
 	.word	820
 	.byte	38
@@ -50602,9 +50602,9 @@ stopDistance:	.type	object
 	.byte	'util.h',0,7,0,0
 	.byte	'bluetooth.h',0,7,0,0
 	.byte	'motor.h',0,7,0,0
+	.byte	'ultrasonic.h',0,7,0,0
 	.byte	'buzzerport.h',0,7,0,0
 	.byte	'led.h',0,8,0,0
-	.byte	'ultrasonic.h',0,7,0,0
 	.byte	'gpt12.h',0,9,0,0
 	.byte	'../ASW/autopark/autopark.c',0,0,0,0
 	.byte	'C:\\\\Second_project\\\\second_project\\\\second_project_git\\\\projectWon-develop\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0

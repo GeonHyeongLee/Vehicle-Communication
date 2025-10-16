@@ -192,10 +192,20 @@ Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWo
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\Libraries\\iLLD\\TC37A\\Tricore\Can\Std\IfxCan.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\tof.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\tof.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ultrasonic.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ultrasonic.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h" :
 Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h"
 "C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\config.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\config.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\routine_control.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\routine_control.h" :
+Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h"
+"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\emergencystop\aeb.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\emergencystop\aeb.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\drivecontrol\control.h"
@@ -214,12 +224,6 @@ Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWo
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ledport.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\session.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\session.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ultrasonic.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\ultrasonic.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\MCAL\port.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\dtc.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\autopark\autopark.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\autopark\autopark.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\motor.h"
@@ -232,7 +236,5 @@ Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWo
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\fsm.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\auth\auth.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\ASW\\auth\auth.h" :
-Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\config.h"
-"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\config.h" :
 Cpu0_Main.o :	"C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\battery.h"
 "C:\\Second_project\\second_project\\second_project_git\\projectWon-develop\\src\\BSW\\Service\battery.h" :

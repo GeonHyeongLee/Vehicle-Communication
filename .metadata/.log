@@ -4403,3 +4403,21 @@ Caused by: java.nio.channels.UnresolvedAddressException
 
 !ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:29:28.049
 !MESSAGE Include paths were discovered in 78 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:38:55.263
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:38:55.265
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project project-second boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:38:55.363
+!MESSAGE Include paths were discovered in 93 milliseconds.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:40:01.575
+!MESSAGE Project index is not complete, and cannot be used for boosting.
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:40:01.576
+!MESSAGE Boosting configuration TriCore Debug (TASKING) of project project-second boosted in 1 milliseconds. (incremental boost)
+
+!ENTRY com.infineon.aurix.buildsystem 1 0 2025-10-16 14:40:01.630
+!MESSAGE Include paths were discovered in 51 milliseconds.

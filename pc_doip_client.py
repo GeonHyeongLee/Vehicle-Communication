@@ -110,14 +110,15 @@ def format_dtc(dtc_bytes):
     return f"{first_char}{second_char}{last_three_chars}"
 
 # --- 공통 기능 함수 ---
-def send_and_receive_doip(uds_payload, update_time=True):
+def send_and_receive_doip(uds_payload, update_time=True, timeout=5):
+    """DoIP 통신을 수행하고, 타임아웃을 설정할 수 있는 공통 함수"""
     global g_last_comm_time
     if update_time:
         g_last_comm_time = time.time()
     
     doip_request_packet = wrap_in_doip(uds_payload)
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.settimeout(5)
+        s.settimeout(timeout) # 파라미터로 받은 타임아웃 값을 사용합니다.
         s.connect((RPI_HOST, DOIP_PORT))
         s.sendall(doip_request_packet)
         doip_response_packet = s.recv(1024)
@@ -272,6 +273,27 @@ def write_aeb_flag(is_on: bool):
     except Exception as e:
         update_result_text(f"[!] 에러: {e}")
 
+def start_motor_routine(rid, name):
+    """모터 강제 구동 루틴(SID 0x31)을 요청하는 함수"""
+    # UDS 요청 : SID 0x31, Sub-func 0x01(start), RID 2바이트
+    uds_request = bytes([0x31, 0x01]) + rid.to_bytes(2, 'big')
+
+    update_result_text(f"[*] {name} (RID 0x{rid:04X}) 요청 전송 중...")
+
+    try:
+        # 루틴 실행이 5초 걸리므로, 응답 타임아웃 넉넉하게 10초로 설정
+        uds_response = send_and_receive_doip(uds_request, timeout=10)
+        # 0x31에 대한 긍정 응답은 0x71
+        if uds_response and uds_response[0] == 0x71:
+            update_result_text(f"[+] {name}이 시작되었습니다.\n(ECU가 5초 간 모터 구동 후 정지합니다)")
+        # 부정 응답인 경우
+        else:
+            update_result_text(f"[-] 루틴 시작 실패 : {uds_response.hex().upper()}")
+    except socket.timeout:
+        update_result_text("[!] 에러: ECU로부터 응답 시간 초과.\n(ECU 루틴 실행이 너무 길거나, 응답이 없습니다)")
+    except Exception as e:
+        update_result_text(f"[!] 에러 : {e}")
+
 # --- GUI 생성 ---
 window = tk.Tk()
 window.title("ECU 진단 툴")
@@ -319,17 +341,31 @@ for i in range(3): info_frame.grid_columnconfigure(i, weight=1)
 # --- 3. 진단 및 제어 그룹 ---
 control_frame = tk.LabelFrame(window, text=" 진단 및 제어 ", padx=10, pady=5, bg="#f0f0f0")
 control_frame.pack(pady=5, padx=10, fill="x")
+
 dtc_button = tk.Button(control_frame, text="DTC 정보 읽기", command=request_dtc_data)
 dtc_button.grid(row=0, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+
 aeb_on_button = tk.Button(control_frame, text="AEB 기능 ON", command=lambda: write_aeb_flag(True))
 aeb_on_button.grid(row=0, column=2, padx=5, pady=5, sticky="ew")
+
 aeb_off_button = tk.Button(control_frame, text="AEB 기능 OFF", command=lambda: write_aeb_flag(False))
 aeb_off_button.grid(row=0, column=3, padx=5, pady=5, sticky="ew")
+
+motor_forward_button = tk.Button(control_frame, text="모터 정회전 테스트", command=lambda: start_motor_routine(0x0001, "모터 정회전 테스트"))
+motor_forward_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+
+motor_reverse_button = tk.Button(control_frame, text="모터 역회전 테스트", command=lambda: start_motor_routine(0x0002, "모터 역회전 테스트"))
+motor_reverse_button.grid(row=2, column=2, columnspan=2, padx=5, pady=5, sticky="ew")
+
 session_extended_button = tk.Button(control_frame, text="세션 시작 (Ext)", command=lambda: control_session(0x03))
 session_extended_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+
 session_default_button = tk.Button(control_frame, text="세션 종료 (Def)", command=lambda: control_session(0x01))
 session_default_button.grid(row=1, column=2, columnspan=2, padx=5, pady=5, sticky="ew")
+
 for i in range(4): control_frame.grid_columnconfigure(i, weight=1)
+
+
 
 # --- 결과 텍스트 창 ---
 result_text = scrolledtext.ScrolledText(window, height=8, font=("Consolas", 14))

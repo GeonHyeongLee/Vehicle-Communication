@@ -1,9 +1,6 @@
 #include "can.h"
-#include "tof.h"
-#include "ultrasonic.h"
 #include <string.h>
-#include "dtc.h" // dtc 정보 읽기용
-#include "config.h" // ota용 플래그 쓰기용
+
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
@@ -527,6 +524,50 @@ void udsHandler (unsigned char *rxData, int rxLen)
                 else
                 {
                     uint8 nr_payload[3] = {0x7F, 0x2E, 0x31};
+                    isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                }
+            }
+            // SID 0x31 (Routine Control)
+            else if (SID == 0x31)
+            {
+                uint8 sub_function = rxData[2];
+                // 2바이트 RID를 파싱합니다 (rxData[3]과 rxData[4] 사용).
+                uint16 rid = ((uint16) rxData[3] << 8) | rxData[4];
+
+                // 1. "루틴 시작" 요청(sub-function 0x01)이 맞는지 확인합니다.
+                if (sub_function == 0x01) // 0x01 = startRoutine
+                {
+                    // 2. 안전을 위해, 현재 세션이 Extended Session인지 확인합니다.
+                    if (session_getCurrent() != SESSION_EXTENDED)
+                    {
+                        // 아니라면 "조건이 맞지 않다"는 부정 응답을 보냅니다.
+                        uint8 nr_payload[] = {0x7F, 0x31, 0x22}; // NRC 0x22 = conditionsNotCorrect
+                        isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                        break; // 여기서 처리 중단
+                    }
+
+                    // 3. 지원하는 RID인지 확인합니다.
+                    if (rid == RID_MOTOR_FORWARD_TEST || rid == RID_MOTOR_REVERSE_TEST)
+                    {
+                        // 4. "요청을 접수했다"는 긍정 응답을 먼저 보냅니다.
+                        //    (실제 루틴 실행은 시간이 걸릴 수 있으므로)
+                        uint8 pos_payload[] = {0x71, 0x01, rxData[3], rxData[4]}; // 0x71 = 0x31 + 0x40
+                        isotp_send_response(0x7E8, pos_payload, sizeof(pos_payload));
+
+                        // 5. routine_control.c에 있는 실제 루틴 실행 함수를 호출합니다.
+                        startRoutine(rid);
+                    }
+                    else
+                    {
+                        // 지원하지 않는 RID에 대한 부정 응답
+                        uint8 nr_payload[] = {0x7F, 0x31, 0x31}; // NRC 0x31 = requestOutOfRange
+                        isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
+                    }
+                }
+                else
+                {
+                    // startRoutine(0x01) 외 다른 Sub-function에 대한 부정 응답
+                    uint8 nr_payload[] = {0x7F, 0x31, 0x12}; // NRC 0x12 = subFunctionNotSupported
                     isotp_send_response(0x7E8, nr_payload, sizeof(nr_payload));
                 }
             }
