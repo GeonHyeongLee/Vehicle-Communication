@@ -2353,3 +2353,19 @@ ROM: 0x9ef4 (40692) = code: 0x847a (33914) + romdata: 0x1a7a (6778)
 RAM: 0x991e (39198) = data + bss
 Finished building: project-second.siz
  
+Build started...
+18:08:38 **** Incremental Build of configuration TriCore Debug (TASKING) for project project-second ****
+amk -j12 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
+Building target: project-second.elf
+Invoking: TASKING Linker
+cctc -f .project-second.elf.opt
+Finished building target: project-second.elf
+ 
+Invoking: Print Size
+elfsize  "project-second.elf"
+Total sizes:
+ROM: 0x9ef4 (40692) = code: 0x847a (33914) + romdata: 0x1a7a (6778)
+RAM: 0x991e (39198) = data + bss
+Finished building: project-second.siz
+ 

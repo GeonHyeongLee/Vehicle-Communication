@@ -1,0 +1,21 @@
+#ifndef ASW_FSM_H_
+#define ASW_FSM_H_
+
+#include "control.h"
+#include "aeb.h"
+#include "autopark.h"
+#include "led.h"
+#include "soa_handler.h"
+#include "tof.h"
+
+typedef enum {
+    STATE_IDLE,
+    STATE_MANUAL_DRIVE,
+    STATE_EMERGENCY_STOP,
+    STATE_AUTO_PARK
+} VehicleState;
+
+void handleStateMachine(MotorState* motorState);
+
+
+#endif /* ASW_FSM_H_ */

@@ -1,0 +1,29 @@
+45   INFO  [main] Log5J : ***  62.4373  ***  **********************************************************
+46   INFO  [main] Log5J : ***  63.4557  ***  Logger configuration successful. Configuration file used: 
+46   INFO  [main] Log5J : ***  63.5319  ***  C:\Infineon\AURIX-Studio-1.10.16\configuration\org.eclipse.osgi\397\0\.cp\lib\log4j.properties
+46   INFO  [main] Log5J : ***  63.5678  ***  **********************************************************
+350  INFO  [main] ISysProductFactory : ***  367.0324  ***  Found product: Name: com.infineon.aurix.buildsystem.aurixide, winIDEA package: winIDEA_IFX_ADS
+2714 INFO  [main] ISysArtifactoryRepository : Is repository on mirror 1 site 'https://m1.247365bb.com/ftp/afrs' available: true
+2715 INFO  [main] ISysArtifactoryRepository : Is repository on mirror 2 site 'https://m2.247365bb.com/ftp/afrs' available: true
+2716 INFO  [main] WinIdeaUpdateManager : Downloading PackageManager.exe from 'https://m1.247365bb.com/ftp/afrs/production/PackageManager.exe'
+7508 INFO  [main] WinIdeaUpdateManager : PackageManager.exe set up at 'C:\Users\USER\AppData\Local\iSYSTEM\b18\PackageManager.exe'
+7508 INFO  [main] WinIdeaUpdateManager : PackageManager 'C:\Users\USER\AppData\Local\iSYSTEM\b18\PackageManager.exe' is executable.
+7510 INFO  [main] CmdRunner : Running: 'C:\Users\USER\AppData\Local\iSYSTEM\b18\PackageManager.exe init --afr-path="C:\Infineon\AURIX-Studio-1.10.16\local_AFR" --owner="C:\Infineon\AURIX-Studio-1.10.16\AURIX-studio.exe"'
+9450 INFO  [main] CmdRunner : Operation finished in 1940ms Return code: 0
+9450 INFO  [main] CmdRunner : Output: >>><<<
+9450 INFO  [main] WinIdeaUpdateManager : WinIdeaUpdateManager: initialization:
+9450 INFO  [main] WinIdeaUpdateManager :  - Product folder: C:\Infineon\AURIX-Studio-1.10.16
+9451 INFO  [main] WinIdeaUpdateManager :  - Product exe (owner): C:\Infineon\AURIX-Studio-1.10.16\AURIX-studio.exe
+9451 INFO  [main] WinIdeaUpdateManager :  - Package manager: C:\Users\USER\AppData\Local\iSYSTEM\b18\PackageManager.exe
+9451 INFO  [main] WinIdeaUpdateManager :  - Local AFR: C:\Infineon\AURIX-Studio-1.10.16\local_AFR
+9451 INFO  [main] WinIdeaUpdateManager :  - Update channel: Production
+9452 INFO  [main] ISysPluginConfiguration : ***  9468.3788  ***  Loading debug plugin properties from 'C:\Infineon\AURIX-Studio-1.10.16\isys_debugger_configuration.json'
+9460 INFO  [main] ISysPluginConfiguration : ***  9476.2431  ***  Loaded plugin configuration:
+	 - Enable embedded: false
+	 - Enable portable false
+	 - Default selection: Custom
+	 - Default install path: '\winIDEA'
+9460 INFO  [main] ISystemPreferences : ***  9476.7474  ***  State location loaded at C:\Second_project\second_project\second_project_git\.metadata\.plugins\si.isystem.eclipse.debug
+9469 INFO  [main] ISystemPreferences : ***  9485.7444  ***  Preferences loaded: Install type: Custom, Custom path: '\winIDEA'
+9474 INFO  [main] ISysDebugPlugin : ***  9490.3627  ***  Starting Plugin si.isystem.eclipse.debug version 921.33400.216241.
+9475 INFO  [main] ISysDebugPlugin : ***  9491.9808  ***  Plugin si.isystem.eclipse.debug started.
