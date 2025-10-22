@@ -2,8 +2,7 @@
 차량 통신 프로젝트 담당 : 진단 통신 -> UDS, DoIP, CAN TP
 
 ## 1. End-to-End 진단 통신 시스템 구축 완료
-PC의 GUI에서 시작된 명령이 이더넷(DoIP)과 CAN 버스를 모두 거쳐 TC375 ECU를 제어하고, 그 응답이 다시 PC 화면에 표시되기까지의 전체 통신 경로(End-to-End Data Flow)를 성공적으로 완성했습니다.
-
+PC의 GUI에서 시작된 명령이 이더넷(DoIP)과 CAN 버스를 모두 거쳐 TC375 ECU를 제어하고, 그 응답이 다시 PC 화면에 표시되기까지의 전체 통신 경로(End-to-End Data Flow)를 설계
 PC ↔ 라즈베리파이: DoIP 프로토콜을 사용한 이더넷 통신 구현
 
 라즈베리파이: DoIP와 CAN-UDS를 양방향으로 번역하는 게이트웨이 역할 설정
@@ -11,13 +10,13 @@ PC ↔ 라즈베리파이: DoIP 프로토콜을 사용한 이더넷 통신 구�
 라즈베리파이 ↔ TC375: UDS on CAN (ISO-TP) 통신 구현
 
 ## 2. ECU(TC375)의 지능화: UDS 서버 핵심 기능 구현
-TC375를 단순한 제어기에서, 외부의 진단 요청에 응답하고 스스로 상태를 보고할 수 있는 지능형 ECU로 발전시켰습니다.
+TC375를 단순한 제어기에서, 외부의 진단 요청에 응답하고 스스로 상태를 보고할 수 있는 ECU로 발전
 
-CAN TP 구현: 7바이트를 초과하는 긴 UDS 응답을 다중 프레임(FF/CF)으로 자동 분할하여 전송하는 기능을 구현했습니다.
+CAN TP 구현: 7바이트 이하의 데이터는 SF, 7바이트를 초과하는 긴 응답은 다중 프레임(FF/CF/FC)으로 자동 분할하여 전송하는 기능을 구현
 
 ### 핵심 UDS 서비스 구현:
 
-SID 0x10 (Session Control) : Session을 Default, Extended 세션으로 나누어 핵심 기능(0x2E, 0x31)은 Extended Session에서만 실행 가능핟로고 구현
+SID 0x10 (Session Control) : Session을 Default, Extended 세션으로 나누어 핵심 기능(0x2E, 0x31)은 Extended Session에서만 실행 가능하도록 구현
 
 SID 0x19 (Read DTC): ECU가 스스로 고장을 진단하고 그 결과를 진단기에게 알려주는 핵심적인 자가 진단 기능을 구현
 
